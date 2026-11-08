@@ -1,0 +1,15 @@
+tile v1: tile v1 (N=4) wb wrapper
+tile v2: tile2 (TIL2) wishbone
+TILE_RESULT tile=v1 trial=0 M=13 K=64 N=9 mismatches=0 fnv=0x207ed5e8 cpu_ref_cycles=103517 tile_total_cycles=53374 tile_busy_cycles=50127 ideal_cycles=900 load_cycles=0 run_cycles=0 read_cycles=0
+TILE_RESULT tile=v2 trial=0 M=13 K=64 N=9 mismatches=0 fnv=0x207ed5e8 cpu_ref_cycles=103517 tile_total_cycles=23240 tile_busy_cycles=354 ideal_cycles=354 load_cycles=20747 run_cycles=416 read_cycles=1517
+TILE_RESULT tile=v1 trial=1 M=13 K=64 N=9 mismatches=0 fnv=0x195d47bd cpu_ref_cycles=103218 tile_total_cycles=53230 tile_busy_cycles=50127 ideal_cycles=900 load_cycles=0 run_cycles=0 read_cycles=0
+TILE_RESULT tile=v2 trial=1 M=13 K=64 N=9 mismatches=0 fnv=0x195d47bd cpu_ref_cycles=103218 tile_total_cycles=23077 tile_busy_cycles=354 ideal_cycles=354 load_cycles=20687 run_cycles=416 read_cycles=1517
+TILE_RESULT tile=v1 trial=2 M=13 K=64 N=9 mismatches=0 fnv=0xf583ec4f cpu_ref_cycles=103218 tile_total_cycles=53230 tile_busy_cycles=50127 ideal_cycles=900 load_cycles=0 run_cycles=0 read_cycles=0
+TILE_RESULT tile=v2 trial=2 M=13 K=64 N=9 mismatches=0 fnv=0xf583ec4f cpu_ref_cycles=103218 tile_total_cycles=23077 tile_busy_cycles=354 ideal_cycles=354 load_cycles=20687 run_cycles=416 read_cycles=1517
+TILE_RESULT tile=v1 trial=0 M=8 K=256 N=32 mismatches=0 fnv=0x6b7711d5 cpu_ref_cycles=2090499 tile_total_cycles=398603 tile_busy_cycles=392983 ideal_cycles=4272 load_cycles=0 run_cycles=0 read_cycles=0
+TILE_RESULT tile=v2 trial=0 M=8 K=256 N=32 mismatches=0 fnv=0x6b7711d5 cpu_ref_cycles=2090499 tile_total_cycles=130685 tile_busy_cycles=1122 ideal_cycles=1122 load_cycles=126011 run_cycles=1181 read_cycles=2996
+TILE_RESULT tile=v1 trial=1 M=8 K=256 N=32 mismatches=0 fnv=0x0163fc33 cpu_ref_cycles=2090559 tile_total_cycles=398603 tile_busy_cycles=392983 ideal_cycles=4272 load_cycles=0 run_cycles=0 read_cycles=0
+TILE_RESULT tile=v2 trial=1 M=8 K=256 N=32 mismatches=0 fnv=0x0163fc33 cpu_ref_cycles=2090559 tile_total_cycles=130685 tile_busy_cycles=1122 ideal_cycles=1122 load_cycles=126011 run_cycles=1181 read_cycles=2996
+TILE_RESULT tile=v1 trial=2 M=8 K=256 N=32 mismatches=0 fnv=0x5121d1c5 cpu_ref_cycles=2090559 tile_total_cycles=398603 tile_busy_cycles=392983 ideal_cycles=4272 load_cycles=0 run_cycles=0 read_cycles=0
+TILE_RESULT tile=v2 trial=2 M=8 K=256 N=32 mismatches=0 fnv=0x5121d1c5 cpu_ref_cycles=2090559 tile_total_cycles=130685 tile_busy_cycles=1122 ideal_cycles=1122 load_cycles=126011 run_cycles=1181 read_cycles=2996
+TILETEST PASS (12 runs)

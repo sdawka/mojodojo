@@ -1,0 +1,45 @@
+/* Bare-metal RV32 layout for Mojo firmware. build.sh substitutes @ROM_BASE@
+   etc. "ROM" holds code + rodata + the .data load image; "RAM" holds .data,
+   .bss, heap (Arena) and the stack (top of RAM). _start (crt0 in fw/rt.mojo)
+   is first in ROM. Defaults put both in LiteX main_ram: the BIOS jumps to
+   0x40000000 (fpga/soc), and rv32sim starts at the ELF entry. */
+OUTPUT_ARCH("riscv")
+ENTRY(_start)
+
+MEMORY
+{
+  ROM (rx)  : ORIGIN = @ROM_BASE@, LENGTH = @ROM_SIZE@
+  RAM (rwx) : ORIGIN = @RAM_BASE@, LENGTH = @RAM_SIZE@
+}
+
+SECTIONS
+{
+  .text : {
+    KEEP(*(.text.init))
+    *(.text .text.*)
+  } > ROM
+
+  .rodata : ALIGN(4) {
+    *(.rodata .rodata.* .srodata .srodata.*)
+  } > ROM
+
+  .data : ALIGN(4) {
+    _data_start = .;
+    *(.data .data.* .sdata .sdata.*)
+    . = ALIGN(4);
+    _data_end = .;
+  } > RAM AT > ROM
+  _data_lma = LOADADDR(.data);
+
+  .bss (NOLOAD) : ALIGN(4) {
+    _bss_start = .;
+    *(.bss .bss.* .sbss .sbss.* COMMON)
+    . = ALIGN(4);
+    _bss_end = .;
+  } > RAM
+
+  _stack_top = ORIGIN(RAM) + LENGTH(RAM);
+  _heap_start = _bss_end;
+
+  /DISCARD/ : { *(.note.GNU-stack) *(.comment) *(.eh_frame) }
+}

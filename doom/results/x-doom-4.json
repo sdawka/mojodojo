@@ -1,0 +1,11 @@
+{
+  "tier": "X-DOOM-4",
+  "status": "pass",
+  "fps": null,
+  "fps_reference": null,
+  "frame": "x-doom-4.png",
+  "date": "2026-11-08T23:10:00Z",
+  "backend": "doomgeneric (unmodified) on a VexRiscv rv32im soft core in a LiteX SoC, cycle-level Verilator simulation, with the int8 tiles v1 and v2 on the same bus (fpga/soc)",
+  "authoritative": false,
+  "notes": "Cycle-level simulation, not a board. Frame 1 (title) and frame 400 (in-game E1M6 demo) SHA-256 and all 64,000 pixels identical to the host doomgeneric build under the same virtual clock; 17/17 checkpoints match. Frame 1 re-verified by the orchestrator (1.83 G simulated cycles, 7.6 min wall). About 4.6 M cycles per title frame and 7.4 M per in-game frame: ~7 fps projected at 50 MHz with single-cycle RAM, slower with SDRAM. Frame image is frame 400 copied from fpga/soc/results/soc-frame400.png."
+}

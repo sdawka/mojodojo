@@ -1,0 +1,6 @@
+third_party/
+build/
+.venv/
+.pixi/
+*.vcd
+*.fst

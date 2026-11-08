@@ -1,0 +1,26 @@
+[project]
+name = "fpga-soc"
+version = "0.1.0"
+description = "LiteX VexRiscv SoC simulation with the int8 matmul tile as a bus peripheral"
+requires-python = ">=3.12,<3.13"
+# Sources are fetched at pinned commits by scripts/fetch.sh into third_party/src
+# (see UPSTREAM.md) and installed into fpga/soc/.venv only.
+dependencies = [
+    "migen",
+    "litex",
+    "pythondata-cpu-vexriscv",
+    "pythondata-software-picolibc",
+    "pythondata-software-compiler_rt",
+    "pythondata-misc-tapcfg",
+]
+
+[tool.uv]
+package = false
+
+[tool.uv.sources]
+migen = { path = "third_party/src/migen" }
+litex = { path = "third_party/src/litex" }
+pythondata-cpu-vexriscv = { path = "third_party/src/pythondata-cpu-vexriscv" }
+pythondata-software-picolibc = { path = "third_party/src/pythondata-software-picolibc" }
+pythondata-software-compiler_rt = { path = "third_party/src/pythondata-software-compiler_rt" }
+pythondata-misc-tapcfg = { path = "third_party/src/pythondata-misc-tapcfg" }

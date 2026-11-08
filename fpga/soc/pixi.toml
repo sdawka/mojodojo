@@ -1,0 +1,36 @@
+[workspace]
+name = "fpga-soc"
+channels = ["conda-forge"]
+platforms = ["osx-arm64"]
+version = "0.1.0"
+
+# Toolchain only. Python deps (LiteX, Migen, pythondata-*) live in the uv
+# project next to this file (pyproject.toml / uv.lock), see README.md.
+[tasks]
+fetch = "bash scripts/fetch.sh"
+# Milestone 1/2 SoC: VexRiscv standard + 64K ROM (BIOS) + 64K SRAM + 16 MiB main RAM + sim UART + tile
+soc = "bash scripts/build_soc.sh build/sim"
+hello = "make -f fw/fw.mk APP=hello && python run.py build/sim/fw/hello/hello.bin --timeout 120"
+tiletest = "make -f fw/fw.mk APP=tiletest APP_COMMON='tile_v1.c tile_v2.c' && python run.py build/sim/fw/tiletest/tiletest.bin --timeout 600 && python scripts/check_tiletest.py build/sim/fw/tiletest/run/uart.log"
+# DOOM SoC: same, 64 MiB main RAM, full picolibc
+mojolink = "make -f fw/fw.mk APP=mojolink EXTRA_OBJS=$PIXI_PROJECT_ROOT/../rvmojo/build/libtile.o && python run.py build/sim/fw/mojolink/mojolink.bin --timeout 120"
+doom-soc = "bash scripts/build_soc.sh build/doom --main-ram-mb 64 --libc full"
+doom-build = "make -j8 -f fw/doom/doom.mk"
+doom-run = "bash scripts/doom_run.sh"
+
+[dependencies]
+clang = "==23.1.4"
+lld = "==23.1.4"
+llvm-tools = "==23.1.4"
+meson = "==1.12.1"
+ninja = "==1.13.2"
+libevent = "==2.1.13"
+json-c = "==0.19"
+zlib = "*"
+pkg-config = "*"
+
+[activation.env]
+PATH = "$PIXI_PROJECT_ROOT/tools/bin:$PIXI_PROJECT_ROOT/.venv/bin:$PATH"
+LITEX_ENV_CC_TRIPLE = "riscv32-unknown-elf"
+# litex sim Makefile looks for json-c/libevent/zlib under HOMEBREW_PREFIX
+HOMEBREW_PREFIX = "$CONDA_PREFIX"

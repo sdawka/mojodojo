@@ -22,3 +22,9 @@ User decision. The best phase-1 decode baseline is 4-bit (48.8 tok/s), which lik
 
 - User suggested Gemma. Rationale: Google's quantization-aware-trained int4 checkpoints are the best chance for a 4-bit config under the 3% gate (plain MLX 4-bit failed for Llama at +7.25%); same-tokenizer 270M/1B drafts; already in the roofline. Risk: 262k vocab makes the LM head costly per decode step; α unmeasured.
 - Started in parallel (quality/correctness only, load-insensitive): lane-gemma (quality/), lane-w8a8-ppl (w8a8/: wikitext ppl of Llama 3B W8A8 prefill in MAX), lane-doom3 (X-DOOM-3). Timed G2-M3 runs still wait for an idle machine.
+
+## 2026-11-08 — Toward a RISC-V + tile SoC and DOOM level 4, simulation first
+
+- Verified: shipped Mojo nightly emits RISC-V (`--target-triple riscv32-unknown-none-elf --emit object` → ELF32 RISC-V; an exported add → `add a0, a1, a0; ret`). So Mojo can be the soft core's firmware language without the compiler source build.
+- Constraints: N=16 tile fills an 85F → v2 at N=8 with DSPs + on-chip buffers + Wishbone slave; DOOM needs MBs of RAM → SDRAM board; X-DOOM-4 may pass on a cycle-level SoC sim.
+- Started in parallel (user-approved, incl. LiteX/VexRiscv/RISC-V toolchain downloads): lane-tile2 (fpga/tile2), lane-soc (fpga/soc: LiteX+VexRiscv Verilator sim, tile peripheral, DOOM port), lane-rvmojo (fpga/rvmojo: bare-metal Mojo firmware driving the tile), lane-boards (fpga/BOARDS.md).

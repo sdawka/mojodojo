@@ -207,7 +207,7 @@ def _parse_stat(p: Path) -> dict:
 
 def load_fpga(reg: Reg) -> dict:
     fp = ROOT / "fpga"
-    out = {"synth": [], "synth_tools": "", "perf": [], "cosim": None, "tests": None, "phantom": None, "maxop": None,
+    out = {"synth": [], "synth_tools": "", "perf": [], "cosim": None, "tests": None, "phantom": None, "maxop": None, "tile2": None,
            "perf_src": None, "design_src": None}
     if not fp.exists():
         return out
@@ -306,6 +306,10 @@ def load_fpga(reg: Reg) -> dict:
     if isinstance(mo, dict):
         mo["_src"] = reg.add(rdir / "maxop.json", mo.get("date"), _status(mo))
         out["maxop"] = mo
+    t2 = _json(rdir / "tile2.json") if rdir.exists() else None
+    if isinstance(t2, dict) and t2.get("soc_integration"):
+        t2["_src"] = reg.add(rdir / "tile2.json", (t2.get("meta") or {}).get("timestamp"), _status(t2.get("meta", {})))
+        out["tile2"] = t2
     return out
 
 

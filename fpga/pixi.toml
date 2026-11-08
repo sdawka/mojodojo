@@ -18,6 +18,11 @@ phantom-build = "bash phantom/build.sh"
 phantom-test = { cmd = "bash phantom/test.sh", depends-on = ["phantom-build"] }
 phantom-demo = { cmd = "mojo run -I . -I phantom phantom/demo.mojo", depends-on = ["phantom-build"], env = { PHANTOM_LIB = "phantom/build/libphantom.dylib" } }
 phantom-plugin-spike = "bash phantom/compiler_plugin/spike.sh"
+# Tile v2: Wishbone slave + BRAM buffers + sequencer (fpga/tile2/README.md)
+tile2-gen = "mojo run -I . tile2/gen.mojo tile2/rtl"
+tile2-test = "mojo run -I . tile2/test_tile2.mojo"
+tile2-cosim = { cmd = "bash sim/tile2_cosim.sh", depends-on = ["tile2-gen"] }
+tile2-synth = "bash sim/tile2_synth.sh"
 
 [dependencies]
 # Pinned to the exact nightly used by ../mojo-max.

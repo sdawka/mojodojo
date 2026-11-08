@@ -1,0 +1,12 @@
+#!/bin/bash
+# GCC-named shim over LLVM clang++-23 (pixi env) so LiteX's GCC-path build works.
+# Rewrites GCC-style -march=rv32i2p0_<ext> to an LLVM ISA string with zicsr/zifencei.
+args=()
+for a in "$@"; do
+  case "$a" in
+    -march=rv32i2p0*) ext="${a#-march=rv32i2p0}"; ext="${ext#_}"; args+=("-march=rv32i${ext}_zicsr_zifencei") ;;
+    -N) args+=("-Wl,-N") ;;
+    *) args+=("$a") ;;
+  esac
+done
+exec clang++-23 --target=riscv32-unknown-elf -Wno-unknown-warning-option -Wno-unused-command-line-argument -fuse-ld=lld "${args[@]}"

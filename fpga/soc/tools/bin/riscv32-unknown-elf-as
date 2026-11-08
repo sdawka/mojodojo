@@ -1,0 +1,2 @@
+#!/bin/sh
+exec clang --target=riscv32-unknown-elf -c -x assembler "$@"

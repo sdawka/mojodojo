@@ -513,12 +513,15 @@ def reach_matrix(reg: Reg, at: Atlas, fpga: dict) -> str:
         ["GPU memory", "yes", n(gbw_m, " GB/s", "Mojo kernel"), n(gbw_x, " GB/s", "MLX"), st("measured", "ok")],
         ["Neural Engine", "no", '<span class="muted">no path</span>', n(ane, what="Core ML CPU+ANE"),
          st("Core ML only", "no")],
-        ["Phantom NPU", "planned: compiler + HAL plugin (G1-C)",
+        ["Phantom NPU", "yes: stdlib target + HAL driver plugin; FFI route used (codegen plugin needs a source build)",
          (reg.num(ph.get("gops"), ph["_src"], unit=" GOP/s") if ph and ph.get("gops") else
           '<span class="muted">not started</span>'), tile_cell,
          st(ph.get("status", "in progress"), "ok" if ph and ph.get("status") == "pass" else "todo") if ph
          else st("not started", "todo")],
-        ["ECP5 FPGA", "planned: Mojo host driver over USB (G1-E)", '<span class="muted">no board run</span>', fp_cell,
+        ["RISC-V soft core (sim)", "yes: <code>--target-triple riscv32-unknown-none-elf</code>, bare-metal firmware",
+         '<span class="muted">drives tile v2 in a VexRiscv SoC (Verilator)</span>', '<span class="muted">C firmware</span>',
+         st("simulation", "ok")],
+        ["ECP5 FPGA", "planned: same SoC on a ULX3S-class board (G1-E)", '<span class="muted">no board run</span>', fp_cell,
          st("synthesis only", "todo")],
     ]
     return fig("Which processors Mojo reaches, and what it measures there",
@@ -601,6 +604,7 @@ def tile_fig(reg: Reg, at: Atlas, fpga: dict) -> str:
     cos, tests = fpga.get("cosim"), fpga.get("tests")
     ph = fpga.get("phantom")
     mo = fpga.get("maxop")
+    t2 = fpga.get("tile2")
     synth = fpga.get("synth") or []
     stages = [
         ("G1-A", "Cycle-accurate simulator in Mojo", "pass" if tests else "not-started",
@@ -617,6 +621,10 @@ def tile_fig(reg: Reg, at: Atlas, fpga: dict) -> str:
           f'{esc(mo["greedy_match"]["ph_all_vs_bf16"]["greedy_full_match"])} vs bf16; projected TTFT '
           f'{reg.num(mo["projected_ttft_ms"]["all:all"]["N16"]["compute_only"] / 1000, mo["_src"], 1, unit=" s")} '
           f'at N=16 vs {reg.num(mo["gpu_ttft_ms"], mo["_src"], 0, unit=" ms")} on the GPU' if mo else "")),
+        ("SoC", "RISC-V soft core + tile v2 + Mojo firmware (simulation)", "pass" if t2 else "not-started",
+         (f'tile v2 N=8 with buffers + Wishbone, bit- and cycle-exact co-sim; in a LiteX/VexRiscv SoC, '
+          f'Mojo bare-metal firmware drives it ({esc(t2["soc_integration"]["end_to_end_8x256x32_cycles"]["speedup"])} '
+          f'vs the soft CPU at 8×256×32); DOOM runs beside it (X-DOOM-4)' if t2 else "")),
         ("G1-E", "ECP5 on a board, driven from Mojo", "in-progress" if synth else "not-started",
          "synthesis and place-and-route only, see below" if synth else ""),
     ]
