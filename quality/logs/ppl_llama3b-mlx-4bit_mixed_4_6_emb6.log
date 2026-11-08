@@ -1,0 +1,10 @@
+[transformers] Token indices sequence length is longer than the specified maximum sequence length for this model (288937 > 131072). Running this sequence through the model will result in indexing errors
+  [4/564] ppl so far 9.0713
+  [84/564] ppl so far 11.2193
+  [164/564] ppl so far 10.3156
+  [244/564] ppl so far 10.5988
+  [324/564] ppl so far 10.4432
+  [404/564] ppl so far 10.8575
+  [484/564] ppl so far 10.7562
+  [564/564] ppl so far 10.7060
+RESULT llama3b-mlx-4bit_mixed_4_6_emb6: ppl=10.7060 ± 0.0768 over 144384 tokens (564 chunks of 512)

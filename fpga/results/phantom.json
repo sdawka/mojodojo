@@ -1,0 +1,56 @@
+{
+  "meta": {
+    "timestamp": "2026-11-08T15:37:33Z",
+    "authoritative": false,
+    "toolchain": "mojo 1.3.0.dev2026110805 (11efb73e) = modular@2841b316, llvm@fa8c6738",
+    "host": "M-series Mac, macOS 26 (Darwin 25.5.0)"
+  },
+  "status": "pass",
+  "summary": "Mojo reports TargetDeviceKind.other(\"phantom\", True) via a stdlib target plugin; int8 matmul bit-exact and cycle-exact through the FFI fallback (C ABI + Mojo context + Python) and through a Modular HAL driver plugin loaded by MAX's NeoDriver; 37/37 tests. Compiler codegen plugin loads but needs a same-commit compiler build (not run).",
+  "gops": 12.25,
+  "gops_note": "simulated tile throughput at nominal 100 MHz, N=8, M=64 K=512 N_out=64; not hardware, not host wall time",
+  "route": "ffi-fallback",
+  "routes": {
+    "stdlib_target_plugin": "works",
+    "hal_driver_plugin": "works",
+    "compiler_codegen_plugin": "loads TargetTraits; codegen needs source build",
+    "ffi": "works"
+  },
+  "tests_passed": 37,
+  "tests_total": 37,
+  "tests": {
+    "capi": [
+      14,
+      14
+    ],
+    "mojo": [
+      6,
+      6
+    ],
+    "python": [
+      12,
+      12
+    ],
+    "hal": [
+      5,
+      5
+    ]
+  },
+  "demo_output": [
+    "target device_kind: other(phantom, accelerator=True)",
+    "device: phantom-npu (simulated 8x8 int8 systolic tile) | api: phantom",
+    "matmul_i8 M=64 K=512 N=64: bit_exact=True",
+    "cycles=34240 (formula 34240), PE utilization 95.7%",
+    "simulated @100 MHz: 342.4 us, 12.25 GOP/s"
+  ],
+  "cycles_example": {
+    "N": 8,
+    "M": 64,
+    "K": 512,
+    "N_out": 64,
+    "cycles": 34240,
+    "formula": 34240
+  },
+  "date": "2026-11-08",
+  "notes": "Commands: pixi run phantom-test / phantom-demo / phantom-plugin-spike (fpga/). Evidence in fpga/phantom/README.md."
+}

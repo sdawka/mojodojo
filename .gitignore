@@ -1,0 +1,15 @@
+# Large / derived
+models/
+**/.pixi/
+**/.venv/
+**/__pycache__/
+llamacpp/src/
+mojo-max/sweep-serving-*/
+*.metallib
+.DS_Store
+# GRREAT local state
+.sync.json
+.zvec-grep/
+
+# Third-party agent skills (modular/skills), install locally
+.claude/

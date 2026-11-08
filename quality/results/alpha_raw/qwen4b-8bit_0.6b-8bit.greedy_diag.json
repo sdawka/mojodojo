@@ -1,0 +1,104 @@
+{
+ "raw_bench512": {
+  "first_mismatch": 12,
+  "plain_token": 11744,
+  "spec_token": 4845,
+  "M1_top2": [
+   11744,
+   4845
+  ],
+  "M1_margin": 0.125,
+  "batched_top2": [
+   4845,
+   11744
+  ],
+  "batched_margin": 0.0,
+  "plain_tok_str": " channels",
+  "spec_tok_str": " bed"
+ },
+ "prose": {
+  "first_mismatch": 161,
+  "plain_token": 700,
+  "spec_token": 3685,
+  "M1_top2": [
+   700,
+   3123
+  ],
+  "M1_margin": 0.0,
+  "batched_top2": [
+   700,
+   3685
+  ],
+  "batched_margin": 0.0,
+  "plain_tok_str": " out",
+  "spec_tok_str": " below"
+ },
+ "list": {
+  "first_mismatch": 78,
+  "plain_token": 23034,
+  "spec_token": 23193,
+  "M1_top2": [
+   23034,
+   23193
+  ],
+  "M1_margin": 0.0,
+  "batched_top2": [
+   23034,
+   23193
+  ],
+  "batched_margin": 0.0,
+  "plain_tok_str": " mild",
+  "spec_tok_str": " moderate"
+ },
+ "summarize": {
+  "first_mismatch": 71,
+  "plain_token": 572,
+  "spec_token": 3897,
+  "M1_top2": [
+   572,
+   3897
+  ],
+  "M1_margin": 0.125,
+  "batched_top2": [
+   3897,
+   572
+  ],
+  "batched_margin": 0.375,
+  "plain_tok_str": " was",
+  "spec_tok_str": " provided"
+ },
+ "howto": {
+  "first_mismatch": 90,
+  "plain_token": 3070,
+  "spec_token": 362,
+  "M1_top2": [
+   3070,
+   362
+  ],
+  "M1_margin": 0.25,
+  "batched_top2": [
+   3070,
+   362
+  ],
+  "batched_margin": 0.25,
+  "plain_tok_str": " **",
+  "spec_tok_str": " A"
+ },
+ "email": {
+  "first_mismatch": 53,
+  "plain_token": 5023,
+  "spec_token": 1431,
+  "M1_top2": [
+   5023,
+   1431
+  ],
+  "M1_margin": 0.25,
+  "batched_top2": [
+   5023,
+   1431
+  ],
+  "batched_margin": 0.25,
+  "plain_tok_str": " currently",
+  "spec_tok_str": " now"
+ }
+}

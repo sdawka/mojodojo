@@ -1,0 +1,40 @@
+WARNING: machine does not look idle (load 2.70). Results will be flagged non-authoritative.
+=== [07:44:26] inventory (load: { 2.70 4.88 7.39 })
+wrote /Users/sdawka/Code/llming/atlas/results/inventory.json
+{
+ "chip": "Apple M5",
+ "model": "J704",
+ "memory_bytes": 34359738368,
+ "p_cores": 4,
+ "e_cores": 6,
+ "p_l1d": 131072,
+ "p_l2": 16777216,
+ "e_l1d": 65536,
+ "e_l2": 6291456,
+ "cacheline": 128,
+ "page": 16384,
+ "sme_svl_bytes": 64,
+ "features": {
+  "FEAT_SME": 1,
+  "FEAT_SME2": 1,
+  "FEAT_SME2p1": 1,
+  "FEAT_SME_F16F16": 1,
+  "FEAT_SME_B16B16": 1,
+  "SME_I8I32": 1,
+  "SME_F16F32": 1,
+  "SME_B16F32": 1,
+  "FEAT_BF16": 1,
+  "FEAT_I8MM": 1,
+  "FEAT_DotProd": 1,
+  "FEAT_FP16": 1,
+  "FEAT_FHM": 1
+ },
+ "gpu_core_count": "\"gpu-core-count\" = 10",
+ "gpu_arch_mlx": "applegpu_g17g"
+}
+=== [07:44:27] build C + Mojo binaries (load: { 2.70 4.88 7.39 })
+/Users/sdawka/Code/llming/atlas/gpu/max_gpu_bench.mojo:153:8: warning: doc string summary should begin with a capital letter or non-alpha character, but this begins with 'k'
+    """kernel: 0 = AppleM5MatMul (NA), 1 = 8x8 simdgroup, 2 = gemv, 3 = int8 W8A8."""
+       ^
+=== [07:44:29] CPU bandwidth (load: { 2.70 4.88 7.39 })
+wrote /Users/sdawka/Code/llming/atlas/results/cpu_bandwidth.json (24 records)

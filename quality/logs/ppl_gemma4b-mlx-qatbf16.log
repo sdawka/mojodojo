@@ -1,0 +1,10 @@
+[transformers] Token indices sequence length is longer than the specified maximum sequence length for this model (292282 > 131072). Running this sequence through the model will result in indexing errors
+  [4/570] ppl so far 15.0669
+  [84/570] ppl so far 15.7034
+  [164/570] ppl so far 14.9604
+  [244/570] ppl so far 15.4240
+  [324/570] ppl so far 15.2496
+  [404/570] ppl so far 15.6361
+  [484/570] ppl so far 15.5635
+  [564/570] ppl so far 15.5092
+RESULT gemma4b-mlx-qatbf16: ppl=15.5778 ± 0.1476 over 145920 tokens (570 chunks of 512)

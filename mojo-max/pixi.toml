@@ -1,0 +1,20 @@
+[workspace]
+authors = ["Sahil Dawka <me@sahil.pro>"]
+channels = ['https://conda.modular.com/max-nightly', 'conda-forge']
+name = "mojo-max"
+platforms = ['osx-arm64']
+version = "0.1.0"
+
+[tasks]
+kernel-smoke = "mojo kernels/gpu_smoke.mojo"
+generate = "max generate --model /Users/sdawka/Code/llming/models/Llama-3.2-3B-Instruct --devices gpu --quantization-encoding bfloat16 --max-length 1024 --max-new-tokens 128 --top-k 1 --prompt 'Write a short story about a robot learning to paint.'"
+serve = "max serve --model /Users/sdawka/Code/llming/models/Llama-3.2-3B-Instruct --devices gpu --quantization-encoding bfloat16 --max-length 4096 --port 8000"
+
+[dependencies]
+python = "3.12.*"
+max-all = ">=26.8.0.dev2026110805,<27"
+
+[activation.env]
+# Use Mojo's in-tree metallib packager instead of `xcrun metal` (no Xcode / Metal Toolchain installed).
+MODULAR_METAL_INTREE_METALLIB = "1"
+MODULAR_TELEMETRY_ENABLED = "0"

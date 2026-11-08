@@ -1,0 +1,4 @@
+<start_of_turn>user
+Given tables customers(id, name, country) and orders(id, customer_id, amount, created_at), write SQL queries for: (1) total revenue per country in 2024, (2) the top 5 customers by lifetime spend, (3) customers with no orders. Explain each query briefly.<end_of_turn>
+<start_of_turn>model
+

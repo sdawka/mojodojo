@@ -1,0 +1,23 @@
+[project]
+name = "mlx-bench"
+version = "0.1.0"
+description = "Add your description here"
+authors = [
+    { name = "Sahil Dawka", email = "me@sahil.pro" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "huggingface-hub[hf-transfer]>=2.4.0",
+    "mlx>=0.32.4",
+    "mlx-lm>=0.32.2",
+    "openai>=3.46.0",
+    "requests>=2.34.2",
+    "transformers>=5.22.2",
+]
+
+[project.scripts]
+mlx-bench = "mlx_bench:main"
+
+[build-system]
+requires = ["uv_build>=0.12.23,<0.13.0"]
+build-backend = "uv_build"

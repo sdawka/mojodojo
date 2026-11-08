@@ -1,0 +1,48 @@
+0.00.705.943 I cmn          init: llama threadpool init, n_threads = 4
+0.01.134.510 I cmn          init: llama threadpool init, n_threads = 4
+
+
+<|begin_of_text|><|start_header_id|>system<|end_header_id|>
+
+Cutting Knowledge Date: December 2023
+Today Date: 08 Nov 2026
+
+<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+Explain why the sky is blue and why sunsets are red. Then answer: why isn't the sky violet, given that violet light scatters even more than blue?<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+The sky appears blue because of a phenomenon called Rayleigh scattering, named after the British physicist Lord Rayleigh, who first described it in the late 19th century. This scattering occurs when sunlight enters Earth's atmosphere and interacts with the tiny molecules of gases such as nitrogen (N2) and oxygen (O2).
+
+Here's what happens:
+
+1. Sunlight, which contains all the colors of the visible spectrum, enters Earth's atmosphere.
+2. The shorter (blue) wavelengths of light are scattered more than the longer (red) wavelengths by the tiny molecules of gases in the atmosphere.
+3. This scattering effect is more pronounced for blue light because the smaller molecules are more effective at scattering the shorter wavelengths.
+4. As a result, the blue light is distributed throughout the atmosphere, giving the sky its blue color.
+
+Now, let's talk about sunsets. During a sunset, the sun's rays have to travel through a longer distance in the atmosphere,
+
+0.04.808.266 I encoded   70 tokens in    0.120 seconds, speed:  583.197 t/s
+0.04.808.266 I decoded  193 tokens in    3.469 seconds, speed:   55.643 t/s
+0.04.808.266 I 
+0.04.808.266 I n_draft   = 3
+0.04.808.267 I n_predict = 193
+0.04.808.267 I n_drafted = 177
+0.04.808.267 I n_accept  = 133
+0.04.808.267 I accept    = 75.141%
+0.04.808.267 I 
+0.04.808.267 I draft:
+
+0.04.808.270 I 
+0.04.808.270 I target:
+
+0.04.808.277 I common_perf_print:    sampling time =      16.77 ms
+0.04.808.277 I common_perf_print:    samplers time =       9.46 ms /   193 tokens
+0.04.808.278 I common_perf_print:        load time =     428.24 ms
+0.04.808.278 I common_perf_print: prompt eval time =    1894.46 ms /   306 tokens (    6.19 ms per token,   161.52 tokens per second)
+0.04.808.279 I common_perf_print:        eval time =       0.00 ms /     1 runs   (    0.00 ms per token,      inf tokens per second)
+0.04.808.279 I common_perf_print:       total time =    4069.69 ms /   307 tokens
+0.04.808.279 I common_perf_print: unaccounted time =    2158.47 ms /  53.0 %      (total - sampling - prompt eval - eval) / (total)
+0.04.808.280 I common_perf_print:    graphs reused =         57
+0.04.808.280 I common_perf_print:   graph reallocs =          0    /     0        (same size) / (changed size)
+
+

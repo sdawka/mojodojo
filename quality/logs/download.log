@@ -1,0 +1,47 @@
+/Users/sdawka/Code/llming/mlx/.venv/lib/python3.12/site-packages/huggingface_hub/constants.py:302: FutureWarning: The `HF_HUB_ENABLE_HF_TRANSFER` environment variable is deprecated as 'hf_transfer' is not used anymore. Please use `HF_XET_HIGH_PERFORMANCE` instead to enable high performance transfer with Xet. Visit https://huggingface.co/docs/huggingface_hub/package_reference/environment_variables#hfxethighperformance for more details.
+  warnings.warn(
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+path=/Users/sdawka/Code/llming/models/mlx-Llama-3.2-1B-Instruct-4bit
+done Llama-3.2-1B-Instruct-4bit 0
+/Users/sdawka/Code/llming/mlx/.venv/lib/python3.12/site-packages/huggingface_hub/constants.py:302: FutureWarning: The `HF_HUB_ENABLE_HF_TRANSFER` environment variable is deprecated as 'hf_transfer' is not used anymore. Please use `HF_XET_HIGH_PERFORMANCE` instead to enable high performance transfer with Xet. Visit https://huggingface.co/docs/huggingface_hub/package_reference/environment_variables#hfxethighperformance for more details.
+  warnings.warn(
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Still waiting to acquire lock on /Users/sdawka/Code/llming/models/mlx-Llama-3.2-3B-Instruct-8bit/.cache/huggingface/.gitignore.lock (elapsed: 0.1 seconds)
+Still waiting to acquire lock on /Users/sdawka/Code/llming/models/mlx-Llama-3.2-3B-Instruct-8bit/.cache/huggingface/.gitignore.lock (elapsed: 0.1 seconds)
+path=/Users/sdawka/Code/llming/models/mlx-Llama-3.2-3B-Instruct-8bit
+done Llama-3.2-3B-Instruct-8bit 0
+/Users/sdawka/Code/llming/mlx/.venv/lib/python3.12/site-packages/huggingface_hub/constants.py:302: FutureWarning: The `HF_HUB_ENABLE_HF_TRANSFER` environment variable is deprecated as 'hf_transfer' is not used anymore. Please use `HF_XET_HIGH_PERFORMANCE` instead to enable high performance transfer with Xet. Visit https://huggingface.co/docs/huggingface_hub/package_reference/environment_variables#hfxethighperformance for more details.
+  warnings.warn(
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Still waiting to acquire lock on /Users/sdawka/Code/llming/models/mlx-Qwen3-0.6B-8bit/.cache/huggingface/.gitignore.lock (elapsed: 0.1 seconds)
+path=/Users/sdawka/Code/llming/models/mlx-Qwen3-0.6B-8bit
+done Qwen3-0.6B-8bit 0
+/Users/sdawka/Code/llming/mlx/.venv/lib/python3.12/site-packages/huggingface_hub/constants.py:302: FutureWarning: The `HF_HUB_ENABLE_HF_TRANSFER` environment variable is deprecated as 'hf_transfer' is not used anymore. Please use `HF_XET_HIGH_PERFORMANCE` instead to enable high performance transfer with Xet. Visit https://huggingface.co/docs/huggingface_hub/package_reference/environment_variables#hfxethighperformance for more details.
+  warnings.warn(
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Still waiting to acquire lock on /Users/sdawka/Code/llming/models/mlx-Qwen3-0.6B-4bit/.cache/huggingface/.gitignore.lock (elapsed: 0.1 seconds)
+Still waiting to acquire lock on /Users/sdawka/Code/llming/models/mlx-Qwen3-0.6B-4bit/.cache/huggingface/.gitignore.lock (elapsed: 0.1 seconds)
+Still waiting to acquire lock on /Users/sdawka/Code/llming/models/mlx-Qwen3-0.6B-4bit/.cache/huggingface/.gitignore.lock (elapsed: 0.1 seconds)
+path=/Users/sdawka/Code/llming/models/mlx-Qwen3-0.6B-4bit
+done Qwen3-0.6B-4bit 0
+/Users/sdawka/Code/llming/mlx/.venv/lib/python3.12/site-packages/huggingface_hub/constants.py:302: FutureWarning: The `HF_HUB_ENABLE_HF_TRANSFER` environment variable is deprecated as 'hf_transfer' is not used anymore. Please use `HF_XET_HIGH_PERFORMANCE` instead to enable high performance transfer with Xet. Visit https://huggingface.co/docs/huggingface_hub/package_reference/environment_variables#hfxethighperformance for more details.
+  warnings.warn(
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+path=/Users/sdawka/Code/llming/models/mlx-Qwen3-4B-8bit
+done Qwen3-4B-8bit 0
+/Users/sdawka/Code/llming/mlx/.venv/lib/python3.12/site-packages/huggingface_hub/constants.py:302: FutureWarning: The `HF_HUB_ENABLE_HF_TRANSFER` environment variable is deprecated as 'hf_transfer' is not used anymore. Please use `HF_XET_HIGH_PERFORMANCE` instead to enable high performance transfer with Xet. Visit https://huggingface.co/docs/huggingface_hub/package_reference/environment_variables#hfxethighperformance for more details.
+  warnings.warn(
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+path=/Users/sdawka/Code/llming/models/mlx-Qwen3-4B-4bit
+done Qwen3-4B-4bit 0
+/Users/sdawka/Code/llming/mlx/.venv/lib/python3.12/site-packages/huggingface_hub/constants.py:302: FutureWarning: The `HF_HUB_ENABLE_HF_TRANSFER` environment variable is deprecated as 'hf_transfer' is not used anymore. Please use `HF_XET_HIGH_PERFORMANCE` instead to enable high performance transfer with Xet. Visit https://huggingface.co/docs/huggingface_hub/package_reference/environment_variables#hfxethighperformance for more details.
+  warnings.warn(
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Still waiting to acquire lock on /Users/sdawka/Code/llming/models/mlx-Qwen3-4B-bf16/.cache/huggingface/.gitignore.lock (elapsed: 0.1 seconds)
+Still waiting to acquire lock on /Users/sdawka/Code/llming/models/mlx-Qwen3-4B-bf16/.cache/huggingface/.gitignore.lock (elapsed: 0.1 seconds)
+path=/Users/sdawka/Code/llming/models/mlx-Qwen3-4B-bf16
+done Qwen3-4B-bf16 0
+/Users/sdawka/Code/llming/mlx/.venv/lib/python3.12/site-packages/huggingface_hub/constants.py:302: FutureWarning: The `HF_HUB_ENABLE_HF_TRANSFER` environment variable is deprecated as 'hf_transfer' is not used anymore. Please use `HF_XET_HIGH_PERFORMANCE` instead to enable high performance transfer with Xet. Visit https://huggingface.co/docs/huggingface_hub/package_reference/environment_variables#hfxethighperformance for more details.
+  warnings.warn(
+path=/Users/sdawka/Code/llming/models/datasets/wikitext
+done wikitext 0

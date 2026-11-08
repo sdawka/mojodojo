@@ -1,0 +1,365 @@
+{
+  "tier": "X-DOOM-2",
+  "status": "pass",
+  "fps": 7965.0,
+  "fps_reference": 7668.7,
+  "frame": "x-doom-2.png",
+  "date": "2026-11-08T15:45:31Z",
+  "backend": "Mojo drawers (R_DrawColumn/Span/Fuzz/Translated + Low variants) via C marshalling stubs; rest of renderer C",
+  "authoritative": false,
+  "notes": "Headless timedemo, Freedoom DEMO1, 7156 frames, median of 7 interleaved runs: C drawers 7669 fps, Mojo scalar 7965 fps (+3.9%), Mojo SIMD 7796 fps (+1.7%). Bit-identical: SHA-256 of every frame; frames reproducible across 6 C runs and 2 runs of each Mojo variant all match C (compared 7125/7156; ~30 skipped because upstream itself is nondeterministic there: startup melt from uninitialised memory, transient garbage pixels); fixed frames [100, 500, 1000, 2000, 3000, 5000, 7000] identical. Per-call check C vs Mojo on all demo calls (normal + low detail) plus 200k randomised calls: 0 mismatches. Whole-frame fps, so drawer differences are diluted by BSP/game logic/palette conversion. Drawer-only microbench, ns/pixel C / Mojo / Mojo SIMD (Mojo incl. C stub + call): column_h168 0.403/0.345/0.404; column_h16 0.559/0.575/0.619; fuzz_h100 1.051/0.833/0.799; span_w320 0.377/0.367/0.283; span_w16 0.554/0.539/0.475. Machine not idle-checked.",
+  "fps_mojo_simd": 7796.2,
+  "fps_runs": {
+    "c": [
+      6393.7,
+      6009.6,
+      7668.7,
+      7924.9,
+      7580.8,
+      8274.5,
+      8303.5
+    ],
+    "mojo": [
+      7235.4,
+      6557.8,
+      7818.3,
+      7965.0,
+      8021.3,
+      8435.1,
+      8496.4
+    ],
+    "mojo-simd": [
+      7070.9,
+      7796.2,
+      7623.8,
+      7790.8,
+      8070.9,
+      8357.1,
+      7907.6
+    ]
+  },
+  "hash_check": {
+    "mojo": {
+      "frames": 7156,
+      "runs_c": 6,
+      "runs_variant": 2,
+      "frames_compared": 7125,
+      "frames_skipped_unstable": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        878,
+        1047,
+        1402,
+        5858
+      ],
+      "mismatches": 0,
+      "first_mismatches": [],
+      "raw_diff_vs_c_run0": 31,
+      "fixed_frames_identical": true
+    },
+    "mojo-simd": {
+      "frames": 7156,
+      "runs_c": 6,
+      "runs_variant": 2,
+      "frames_compared": 7125,
+      "frames_skipped_unstable": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        878,
+        1047,
+        1402,
+        5858
+      ],
+      "mismatches": 0,
+      "first_mismatches": [],
+      "raw_diff_vs_c_run0": 31,
+      "fixed_frames_identical": true
+    }
+  },
+  "c_unstable_frames": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    878,
+    1047,
+    1402,
+    5858
+  ],
+  "verify": {
+    "mojo": {
+      "selftest_calls": 200000,
+      "selftest_mismatches": 0,
+      "demo_calls": 12544441,
+      "demo_mismatches": 0,
+      "per_drawer_calls_mismatches": {
+        "Column": [
+          10659192,
+          0
+        ],
+        "ColumnLow": [
+          25000,
+          0
+        ],
+        "FuzzColumn": [
+          121391,
+          0
+        ],
+        "FuzzColumnLow": [
+          25000,
+          0
+        ],
+        "TranslatedColumn": [
+          25000,
+          0
+        ],
+        "TranslatedColumnLow": [
+          25000,
+          0
+        ],
+        "Span": [
+          1838858,
+          0
+        ],
+        "SpanLow": [
+          25000,
+          0
+        ]
+      }
+    },
+    "mojo-simd": {
+      "selftest_calls": 200000,
+      "selftest_mismatches": 0,
+      "demo_calls": 12544441,
+      "demo_mismatches": 0,
+      "per_drawer_calls_mismatches": {
+        "Column": [
+          10659192,
+          0
+        ],
+        "ColumnLow": [
+          25000,
+          0
+        ],
+        "FuzzColumn": [
+          121391,
+          0
+        ],
+        "FuzzColumnLow": [
+          25000,
+          0
+        ],
+        "TranslatedColumn": [
+          25000,
+          0
+        ],
+        "TranslatedColumnLow": [
+          25000,
+          0
+        ],
+        "Span": [
+          1838858,
+          0
+        ],
+        "SpanLow": [
+          25000,
+          0
+        ]
+      }
+    },
+    "mojo-lowdetail": {
+      "selftest_calls": 200000,
+      "selftest_mismatches": 0,
+      "demo_calls": 8727356,
+      "demo_mismatches": 0,
+      "per_drawer_calls_mismatches": {
+        "Column": [
+          4707346,
+          0
+        ],
+        "ColumnLow": [
+          2509923,
+          0
+        ],
+        "FuzzColumn": [
+          25014,
+          0
+        ],
+        "FuzzColumnLow": [
+          64654,
+          0
+        ],
+        "TranslatedColumn": [
+          25000,
+          0
+        ],
+        "TranslatedColumnLow": [
+          25000,
+          0
+        ],
+        "Span": [
+          404194,
+          0
+        ],
+        "SpanLow": [
+          1166225,
+          0
+        ]
+      }
+    },
+    "mojo-simd-lowdetail": {
+      "selftest_calls": 200000,
+      "selftest_mismatches": 0,
+      "demo_calls": 8727356,
+      "demo_mismatches": 0,
+      "per_drawer_calls_mismatches": {
+        "Column": [
+          4707346,
+          0
+        ],
+        "ColumnLow": [
+          2509923,
+          0
+        ],
+        "FuzzColumn": [
+          25014,
+          0
+        ],
+        "FuzzColumnLow": [
+          64654,
+          0
+        ],
+        "TranslatedColumn": [
+          25000,
+          0
+        ],
+        "TranslatedColumnLow": [
+          25000,
+          0
+        ],
+        "Span": [
+          404194,
+          0
+        ],
+        "SpanLow": [
+          1166225,
+          0
+        ]
+      }
+    }
+  },
+  "frame_sha256": {
+    "100": "9780d579ca7c3374c4b3f3f31c24d720d8afd0f96f3f02bfc4c73458d9ebaaed",
+    "500": "f97dc62425422b4061a4bb23afbec82037fcd51aa856b28455a0567101d91f02",
+    "1000": "a26073f407b66d6bcbe336415b350b89447aa9cf13086d0008c0f525a42d85ab",
+    "2000": "e4fb13d764140c1e3135a451d33b113a976ea5b97f2aa292da9803374ebe8f0e",
+    "3000": "25d399c7dc5244b8a1380b6fe03e4dcd83c62f537623fff8ce2e9dac202cf0ac",
+    "5000": "5c605edac4ade02c3cf0d3dc00a3576b9c02507032e57f6056131df936d4ff2b",
+    "7000": "7bfc38a03b6dfa0f0927b27cd9bf75667d8f309b1e6e3c2789005c8383c3a00e"
+  },
+  "drawer_microbench": {
+    "column_h168": {
+      "c_ns_per_px": 0.403,
+      "mojo_ns_per_px": 0.345,
+      "c_ns_per_px_2": 0.403,
+      "mojo-simd_ns_per_px": 0.404
+    },
+    "column_h16": {
+      "c_ns_per_px": 0.559,
+      "mojo_ns_per_px": 0.575,
+      "c_ns_per_px_2": 0.537,
+      "mojo-simd_ns_per_px": 0.619
+    },
+    "fuzz_h100": {
+      "c_ns_per_px": 1.051,
+      "mojo_ns_per_px": 0.833,
+      "c_ns_per_px_2": 1.015,
+      "mojo-simd_ns_per_px": 0.799
+    },
+    "span_w320": {
+      "c_ns_per_px": 0.377,
+      "mojo_ns_per_px": 0.367,
+      "c_ns_per_px_2": 0.376,
+      "mojo-simd_ns_per_px": 0.283
+    },
+    "span_w16": {
+      "c_ns_per_px": 0.554,
+      "mojo_ns_per_px": 0.539,
+      "c_ns_per_px_2": 0.557,
+      "mojo-simd_ns_per_px": 0.475
+    }
+  }
+}

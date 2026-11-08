@@ -1,0 +1,23 @@
+{
+ "name": "gemma1b-mlx-qat4bit",
+ "model": "/Users/sdawka/Code/llming/models/gemma3/mlx-gemma-3-1b-it-qat-4bit",
+ "runtime": "mlx",
+ "ctx": 512,
+ "chunks": 570,
+ "scored_tokens": 145920,
+ "total_test_tokens": 292282,
+ "bos_reset_per_chunk": true,
+ "ppl": 35.077325791308354,
+ "ppl_se": 0.34752671956736325,
+ "mean_nll": 3.557554932879507,
+ "wall_s_non_authoritative": 53.30589916597819,
+ "meta": {
+  "timestamp": "2026-11-08T20:06:12.591466+00:00",
+  "authoritative_quality": true,
+  "timing_authoritative": false,
+  "versions": {
+   "mlx": "0.32.4",
+   "mlx_lm": "0.32.2"
+  }
+ }
+}

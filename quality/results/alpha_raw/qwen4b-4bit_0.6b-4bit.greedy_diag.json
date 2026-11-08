@@ -1,0 +1,87 @@
+{
+ "raw_bench512": {
+  "first_mismatch": 51,
+  "plain_token": 9058,
+  "spec_token": 264,
+  "M1_top2": [
+   9058,
+   264
+  ],
+  "M1_margin": 0.125,
+  "batched_top2": [
+   9058,
+   264
+  ],
+  "batched_margin": 0.125,
+  "plain_tok_str": " dry",
+  "spec_tok_str": " a"
+ },
+ "prose": {
+  "first_mismatch": 12,
+  "plain_token": 2849,
+  "spec_token": 2272,
+  "M1_top2": [
+   2849,
+   2272
+  ],
+  "M1_margin": 0.125,
+  "batched_top2": [
+   2272,
+   2849
+  ],
+  "batched_margin": 0.0,
+  "plain_tok_str": " days",
+  "spec_tok_str": " life"
+ },
+ "list": {
+  "first_mismatch": 28,
+  "plain_token": 4802,
+  "spec_token": 8628,
+  "M1_top2": [
+   4802,
+   8628
+  ],
+  "M1_margin": 0.125,
+  "batched_top2": [
+   8628,
+   4802
+  ],
+  "batched_margin": 0.25,
+  "plain_tok_str": " energy",
+  "spec_tok_str": " heat"
+ },
+ "summarize": {
+  "first_mismatch": 10,
+  "plain_token": 264,
+  "spec_token": 279,
+  "M1_top2": [
+   264,
+   279
+  ],
+  "M1_margin": 0.0,
+  "batched_top2": [
+   279,
+   264
+  ],
+  "batched_margin": 0.25,
+  "plain_tok_str": " a",
+  "spec_tok_str": " the"
+ },
+ "sql": {
+  "first_mismatch": 153,
+  "plain_token": 448,
+  "spec_token": 311,
+  "M1_top2": [
+   448,
+   311
+  ],
+  "M1_margin": 0.25,
+  "batched_top2": [
+   448,
+   311
+  ],
+  "batched_margin": 0.25,
+  "plain_tok_str": " with",
+  "spec_tok_str": " to"
+ }
+}

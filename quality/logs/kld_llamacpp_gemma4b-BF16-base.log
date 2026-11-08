@@ -1,0 +1,12 @@
+0.00.167.069 W load: control-looking token:    212 '</s>' was not control-type; this is probably a bug in the model. its type will be overridden
+0.02.210.008 I cmn          init: llama threadpool init, n_threads = 4
+0.02.290.130 I 
+0.02.290.149 I system_info: n_threads = 4 (n_threads_batch = 4) / 10 | MTL : EMBED_LIBRARY = 1 | CPU : NEON = 1 | ARM_FMA = 1 | FP16_VA = 1 | MATMUL_INT8 = 1 | DOTPROD = 1 | SME = 1 | SME2 = 1 | ACCELERATE = 1 | REPACK = 1 | 
+0.02.292.685 I perplexity: saving all logits to /Users/sdawka/Code/llming/models/gemma3/kld/gemma4b-BF16.kld
+0.02.294.697 I perplexity: tokenizing the input ..
+0.02.738.368 I perplexity: tokenization took 445.672 ms
+0.02.738.438 I perplexity: calculating perplexity over 64 chunks, n_ctx=512, batch_size=2048, n_seq=4
+0.04.617.371 I perplexity: 1.87 seconds per pass - ETA 0.48 minutes
+[1]12.4517,[2]15.9633,[3]16.7648,[4]16.8604,[5]16.7807,[6]17.5937,[7]17.8989,[8]18.1557,[9]19.6616,[10]20.3319,[11]19.8823,[12]20.3940,[13]21.3943,[14]20.6425,[15]20.3503,[16]19.8881,[17]19.3019,[18]19.8423,[19]19.8548,[20]19.9450,[21]19.4450,[22]19.2280,[23]18.6331,[24]17.8404,[25]17.4545,[26]16.9010,[27]16.6360,[28]16.6027,[29]16.3849,[30]16.7219,[31]16.5308,[32]16.5888,[33]16.7043,[34]16.9427,[35]16.9108,[36]16.9824,[37]17.1930,[38]16.9165,[39]16.9653,[40]16.6577,[41]16.3437,[42]16.2827,[43]16.2949,[44]16.0798,[45]15.9569,[46]16.0555,[47]16.1058,[48]16.1324,[49]16.1482,[50]16.2805,[51]16.3234,[52]16.2844,[53]16.4650,[54]16.4303,[55]16.5284,[56]16.4508,[57]16.4646,[58]16.5905,[59]16.7443,[60]16.8950,[61]16.8364,[62]16.8547,[63]17.0287,[64]17.1491,
+0.38.815.791 I Final estimate: PPL = 17.1491 +/- 0.51174
+

@@ -1,0 +1,23 @@
+{
+ "name": "llama3b-mlx-4bit_g32",
+ "model": "models/mlx-Llama-3.2-3B-Instruct-4bit-g32",
+ "runtime": "mlx",
+ "ctx": 512,
+ "chunks": 564,
+ "scored_tokens": 144384,
+ "total_test_tokens": 288937,
+ "bos_reset_per_chunk": true,
+ "ppl": 10.922580767363389,
+ "ppl_se": 0.07865076440021067,
+ "mean_nll": 2.390832276401913,
+ "wall_s_non_authoritative": 146.25096329202643,
+ "meta": {
+  "timestamp": "2026-11-08T16:38:11.441583+00:00",
+  "authoritative_quality": true,
+  "timing_authoritative": false,
+  "versions": {
+   "mlx": "0.32.4",
+   "mlx_lm": "0.32.2"
+  }
+ }
+}

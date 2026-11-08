@@ -1,0 +1,4 @@
+<start_of_turn>user
+Draft a polite but firm email to a contractor who is three weeks late finishing a kitchen renovation. Ask for a revised schedule and mention the penalty clause in the contract.<end_of_turn>
+<start_of_turn>model
+

@@ -1,0 +1,9 @@
+<|start_header_id|>system<|end_header_id|>
+
+Cutting Knowledge Date: December 2023
+Today Date: 08 Nov 2026
+
+<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+Given tables customers(id, name, country) and orders(id, customer_id, amount, created_at), write SQL queries for: (1) total revenue per country in 2024, (2) the top 5 customers by lifetime spend, (3) customers with no orders. Explain each query briefly.<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+

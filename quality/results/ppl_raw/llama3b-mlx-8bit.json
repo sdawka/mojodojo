@@ -1,0 +1,23 @@
+{
+ "name": "llama3b-mlx-8bit",
+ "model": "/Users/sdawka/Code/llming/models/mlx-Llama-3.2-3B-Instruct-8bit",
+ "runtime": "mlx",
+ "ctx": 512,
+ "chunks": 564,
+ "scored_tokens": 144384,
+ "total_test_tokens": 288937,
+ "bos_reset_per_chunk": true,
+ "ppl": 10.325864169773483,
+ "ppl_se": 0.07359757171081636,
+ "mean_nll": 2.3346518321750738,
+ "wall_s_non_authoritative": 191.80272870796034,
+ "meta": {
+  "timestamp": "2026-11-08T16:15:57.808114+00:00",
+  "authoritative_quality": true,
+  "timing_authoritative": false,
+  "versions": {
+   "mlx": "0.32.4",
+   "mlx_lm": "0.32.2"
+  }
+ }
+}

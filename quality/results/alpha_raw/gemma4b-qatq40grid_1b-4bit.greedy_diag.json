@@ -1,0 +1,128 @@
+{
+ "raw_bench512": {
+  "first_mismatch": 70,
+  "plain_token": 691,
+  "spec_token": 236764,
+  "M1_top2": [
+   691,
+   236764
+  ],
+  "M1_margin": 0.0,
+  "batched_top2": [
+   236764,
+   691
+  ],
+  "batched_margin": 0.125,
+  "plain_tok_str": " was",
+  "spec_tok_str": ",",
+  "plain_fullcache_equal": true
+ },
+ "prose": {
+  "first_mismatch": 9,
+  "plain_token": 236761,
+  "spec_token": 236764,
+  "M1_top2": [
+   236761,
+   236764
+  ],
+  "M1_margin": 0.0,
+  "batched_top2": [
+   236761,
+   236764
+  ],
+  "batched_margin": 0.0,
+  "plain_tok_str": ".",
+  "spec_tok_str": ",",
+  "plain_fullcache_equal": true
+ },
+ "code": {
+  "first_mismatch": 25,
+  "plain_token": 236787,
+  "spec_token": 236779,
+  "M1_top2": [
+   236787,
+   236779
+  ],
+  "M1_margin": 0.25,
+  "batched_top2": [
+   236779,
+   236787
+  ],
+  "batched_margin": 0.0,
+  "plain_tok_str": ":",
+  "spec_tok_str": "_",
+  "plain_fullcache_equal": true
+ },
+ "list": {
+  "first_mismatch": 37,
+  "plain_token": 5802,
+  "spec_token": 2321,
+  "M1_top2": [
+   5802,
+   2321
+  ],
+  "M1_margin": 0.25,
+  "batched_top2": [
+   2321,
+   5802
+  ],
+  "batched_margin": 0.25,
+  "plain_tok_str": " degree",
+  "spec_tok_str": " few",
+  "plain_fullcache_equal": true
+ },
+ "qa": {
+  "first_mismatch": 73,
+  "plain_token": 236858,
+  "spec_token": 236789,
+  "M1_top2": [
+   236858,
+   236789
+  ],
+  "M1_margin": 0.25,
+  "batched_top2": [
+   236789,
+   236858
+  ],
+  "batched_margin": 0.0,
+  "plain_tok_str": "\u2019",
+  "spec_tok_str": "'",
+  "plain_fullcache_equal": true
+ },
+ "summarize": {
+  "first_mismatch": 47,
+  "plain_token": 9744,
+  "spec_token": 236764,
+  "M1_top2": [
+   9744,
+   236764
+  ],
+  "M1_margin": 0.0,
+  "batched_top2": [
+   9744,
+   236764
+  ],
+  "batched_margin": 0.0,
+  "plain_tok_str": " village",
+  "spec_tok_str": ",",
+  "plain_fullcache_equal": true
+ },
+ "email": {
+  "first_mismatch": 20,
+  "plain_token": 496,
+  "spec_token": 822,
+  "M1_top2": [
+   496,
+   822
+  ],
+  "M1_margin": 0.0,
+  "batched_top2": [
+   822,
+   496
+  ],
+  "batched_margin": 0.25,
+  "plain_tok_str": " a",
+  "spec_tok_str": " your",
+  "plain_fullcache_equal": true
+ }
+}

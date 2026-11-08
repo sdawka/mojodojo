@@ -1,0 +1,29 @@
+[workspace]
+authors = ["Sahil Dawka <me@sahil.pro>"]
+channels = ['https://conda.modular.com/max-nightly', 'conda-forge']
+name = "fpga"
+platforms = ['osx-arm64']
+version = "0.1.0"
+
+[tasks]
+test = "mojo run -I . tests/test_systolic.mojo"
+perf = "mojo run -I . tools/perf.mojo"
+trace = "mojo run -I . tools/dump_trace.mojo"
+rtlgen = "mojo run -I . tools/gen_rtl.mojo rtl"
+cosim = { cmd = "bash sim/cosim.sh", depends-on = ["rtlgen"] }
+synth = "bash sim/synth.sh"
+# G1-C phantom NPU (fpga/phantom/README.md)
+phantom-fetch-src = "bash phantom/fetch_toolchain_src.sh"
+phantom-build = "bash phantom/build.sh"
+phantom-test = { cmd = "bash phantom/test.sh", depends-on = ["phantom-build"] }
+phantom-demo = { cmd = "mojo run -I . -I phantom phantom/demo.mojo", depends-on = ["phantom-build"], env = { PHANTOM_LIB = "phantom/build/libphantom.dylib" } }
+phantom-plugin-spike = "bash phantom/compiler_plugin/spike.sh"
+
+[dependencies]
+# Pinned to the exact nightly used by ../mojo-max.
+mojo = "==1.3.0.dev2026110805"
+mojo-compiler = "==1.3.0.dev2026110805"
+
+[activation.env]
+MODULAR_METAL_INTREE_METALLIB = "1"
+MODULAR_TELEMETRY_ENABLED = "0"

@@ -1,0 +1,4 @@
+<start_of_turn>user
+How does a hash map work internally? Cover hashing, buckets, collision resolution (chaining vs open addressing), load factor and resizing, and the time complexity of each operation.<end_of_turn>
+<start_of_turn>model
+

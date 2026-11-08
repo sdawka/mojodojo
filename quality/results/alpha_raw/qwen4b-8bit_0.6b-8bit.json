@@ -1,0 +1,918 @@
+{
+ "pair": "qwen4b-8bit_0.6b-8bit",
+ "target": "/Users/sdawka/Code/llming/models/mlx-Qwen3-4B-8bit",
+ "draft": "/Users/sdawka/Code/llming/models/mlx-Qwen3-0.6B-8bit",
+ "max_tokens": 192,
+ "prompts": {
+  "raw_bench512": {
+   "prompt_tokens": 511,
+   "greedy_tokens": 192,
+   "plain_wall_s": 7.7795055419555865,
+   "greedy_text_head": " was now a living thing, its banks eroding, its channels shifting, and its water chemistry changing in ways that were not yet fully understood. I had to spend weeks in the field, often in",
+   "k": {
+    "1": {
+     "tokens": 192,
+     "steps": 122,
+     "completed_steps": 122,
+     "proposed": 122,
+     "accepted": 70,
+     "rejections": 52,
+     "tokens_in_completed_steps": 192,
+     "accept_hist": [
+      52,
+      70
+     ],
+     "acc_ratio": 0.5737704918032787,
+     "alpha_iid": 0.5737704918032787,
+     "E_tokens_per_step": 1.5737704918032787,
+     "greedy_equal": false,
+     "first_mismatch_index": 12,
+     "spec_wall_s": 6.344856458017603
+    },
+    "2": {
+     "tokens": 192,
+     "steps": 103,
+     "completed_steps": 103,
+     "proposed": 205,
+     "accepted": 89,
+     "rejections": 74,
+     "tokens_in_completed_steps": 192,
+     "accept_hist": [
+      42,
+      31,
+      29
+     ],
+     "acc_ratio": 0.43414634146341463,
+     "alpha_iid": 0.5460122699386503,
+     "E_tokens_per_step": 1.8640776699029127,
+     "greedy_equal": false,
+     "first_mismatch_index": 12,
+     "spec_wall_s": 5.8278478749562055
+    },
+    "3": {
+     "tokens": 192,
+     "steps": 96,
+     "completed_steps": 96,
+     "proposed": 286,
+     "accepted": 96,
+     "rejections": 82,
+     "tokens_in_completed_steps": 192,
+     "accept_hist": [
+      40,
+      28,
+      13,
+      14
+     ],
+     "acc_ratio": 0.3356643356643357,
+     "alpha_iid": 0.5393258426966292,
+     "E_tokens_per_step": 2.0,
+     "greedy_equal": false,
+     "first_mismatch_index": 12,
+     "spec_wall_s": 6.1118574169813655
+    },
+    "4": {
+     "tokens": 192,
+     "steps": 91,
+     "completed_steps": 91,
+     "proposed": 361,
+     "accepted": 101,
+     "rejections": 83,
+     "tokens_in_completed_steps": 192,
+     "accept_hist": [
+      37,
+      27,
+      12,
+      6,
+      8
+     ],
+     "acc_ratio": 0.27977839335180055,
+     "alpha_iid": 0.5489130434782609,
+     "E_tokens_per_step": 2.10989010989011,
+     "greedy_equal": false,
+     "first_mismatch_index": 12,
+     "spec_wall_s": 6.418795875040814
+    }
+   }
+  },
+  "prose": {
+   "prompt_tokens": 44,
+   "greedy_tokens": 192,
+   "plain_wall_s": 7.250762208015658,
+   "greedy_text_head": "Captain Elias Gray had served at the lighthouse on Black Rock for thirty years. Every morning, he would climb the spiral stairs to the top, adjust the lens, and send a steady beam across the",
+   "k": {
+    "1": {
+     "tokens": 192,
+     "steps": 125,
+     "completed_steps": 124,
+     "proposed": 125,
+     "accepted": 68,
+     "rejections": 57,
+     "tokens_in_completed_steps": 191,
+     "accept_hist": [
+      57,
+      67
+     ],
+     "acc_ratio": 0.544,
+     "alpha_iid": 0.544,
+     "E_tokens_per_step": 1.5403225806451613,
+     "greedy_equal": false,
+     "first_mismatch_index": 161,
+     "spec_wall_s": 5.674144334043376
+    },
+    "2": {
+     "tokens": 192,
+     "steps": 105,
+     "completed_steps": 104,
+     "proposed": 209,
+     "accepted": 88,
+     "rejections": 75,
+     "tokens_in_completed_steps": 191,
+     "accept_hist": [
+      46,
+      29,
+      29
+     ],
+     "acc_ratio": 0.42105263157894735,
+     "alpha_iid": 0.5398773006134969,
+     "E_tokens_per_step": 1.8365384615384615,
+     "greedy_equal": false,
+     "first_mismatch_index": 161,
+     "spec_wall_s": 5.38497820799239
+    },
+    "3": {
+     "tokens": 192,
+     "steps": 97,
+     "completed_steps": 96,
+     "proposed": 289,
+     "accepted": 96,
+     "rejections": 84,
+     "tokens_in_completed_steps": 191,
+     "accept_hist": [
+      41,
+      27,
+      16,
+      12
+     ],
+     "acc_ratio": 0.33217993079584773,
+     "alpha_iid": 0.5333333333333333,
+     "E_tokens_per_step": 1.9895833333333333,
+     "greedy_equal": false,
+     "first_mismatch_index": 161,
+     "spec_wall_s": 5.594343709002715
+    },
+    "4": {
+     "tokens": 192,
+     "steps": 95,
+     "completed_steps": 94,
+     "proposed": 377,
+     "accepted": 98,
+     "rejections": 89,
+     "tokens_in_completed_steps": 191,
+     "accept_hist": [
+      38,
+      31,
+      14,
+      6,
+      5
+     ],
+     "acc_ratio": 0.259946949602122,
+     "alpha_iid": 0.5240641711229946,
+     "E_tokens_per_step": 2.0319148936170213,
+     "greedy_equal": false,
+     "first_mismatch_index": 161,
+     "spec_wall_s": 6.03912145801587
+    }
+   }
+  },
+  "code": {
+   "prompt_tokens": 58,
+   "greedy_tokens": 192,
+   "plain_wall_s": 7.065295458014589,
+   "greedy_text_head": "Here's a Python function that parses an Apache combined log file and returns the top 10 IP addresses by request count and the top 10 requested paths. The function includes type hints, a",
+   "k": {
+    "1": {
+     "tokens": 192,
+     "steps": 102,
+     "completed_steps": 102,
+     "proposed": 102,
+     "accepted": 90,
+     "rejections": 12,
+     "tokens_in_completed_steps": 192,
+     "accept_hist": [
+      12,
+      90
+     ],
+     "acc_ratio": 0.8823529411764706,
+     "alpha_iid": 0.8823529411764706,
+     "E_tokens_per_step": 1.8823529411764706,
+     "greedy_equal": true,
+     "first_mismatch_index": null,
+     "spec_wall_s": 4.596686792036053
+    },
+    "2": {
+     "tokens": 192,
+     "steps": 70,
+     "completed_steps": 70,
+     "proposed": 140,
+     "accepted": 122,
+     "rejections": 14,
+     "tokens_in_completed_steps": 192,
+     "accept_hist": [
+      4,
+      10,
+      56
+     ],
+     "acc_ratio": 0.8714285714285714,
+     "alpha_iid": 0.8970588235294118,
+     "E_tokens_per_step": 2.742857142857143,
+     "greedy_equal": true,
+     "first_mismatch_index": null,
+     "spec_wall_s": 3.6539389170357026
+    },
+    "3": {
+     "tokens": 192,
+     "steps": 58,
+     "completed_steps": 58,
+     "proposed": 174,
+     "accepted": 134,
+     "rejections": 19,
+     "tokens_in_completed_steps": 192,
+     "accept_hist": [
+      7,
+      7,
+      5,
+      39
+     ],
+     "acc_ratio": 0.7701149425287356,
+     "alpha_iid": 0.8758169934640523,
+     "E_tokens_per_step": 3.310344827586207,
+     "greedy_equal": true,
+     "first_mismatch_index": null,
+     "spec_wall_s": 3.4576506249723025
+    },
+    "4": {
+     "tokens": 192,
+     "steps": 47,
+     "completed_steps": 47,
+     "proposed": 187,
+     "accepted": 145,
+     "rejections": 17,
+     "tokens_in_completed_steps": 192,
+     "accept_hist": [
+      3,
+      6,
+      4,
+      3,
+      30
+     ],
+     "acc_ratio": 0.7754010695187166,
+     "alpha_iid": 0.8950617283950617,
+     "E_tokens_per_step": 4.085106382978723,
+     "greedy_equal": true,
+     "first_mismatch_index": null,
+     "spec_wall_s": 3.0773307920317166
+    }
+   }
+  },
+  "list": {
+   "prompt_tokens": 41,
+   "greedy_tokens": 192,
+   "plain_wall_s": 7.148887625022326,
+   "greedy_text_head": "**Heating**  \n1. Use a programmable thermostat to adjust temperatures when away or asleep.  \n2. Seal windows and doors with weatherstripping to prevent heat loss.  \n3. Use",
+   "k": {
+    "1": {
+     "tokens": 192,
+     "steps": 119,
+     "completed_steps": 119,
+     "proposed": 119,
+     "accepted": 73,
+     "rejections": 46,
+     "tokens_in_completed_steps": 192,
+     "accept_hist": [
+      46,
+      73
+     ],
+     "acc_ratio": 0.6134453781512605,
+     "alpha_iid": 0.6134453781512605,
+     "E_tokens_per_step": 1.6134453781512605,
+     "greedy_equal": false,
+     "first_mismatch_index": 78,
+     "spec_wall_s": 5.318628458015155
+    },
+    "2": {
+     "tokens": 192,
+     "steps": 93,
+     "completed_steps": 93,
+     "proposed": 186,
+     "accepted": 99,
+     "rejections": 53,
+     "tokens_in_completed_steps": 192,
+     "accept_hist": [
+      34,
+      19,
+      40
+     ],
+     "acc_ratio": 0.532258064516129,
+     "alpha_iid": 0.6513157894736842,
+     "E_tokens_per_step": 2.064516129032258,
+     "greedy_equal": false,
+     "first_mismatch_index": 78,
+     "spec_wall_s": 4.806664458999876
+    },
+    "3": {
+     "tokens": 192,
+     "steps": 83,
+     "completed_steps": 83,
+     "proposed": 249,
+     "accepted": 109,
+     "rejections": 57,
+     "tokens_in_completed_steps": 192,
+     "accept_hist": [
+      36,
+      11,
+      10,
+      26
+     ],
+     "acc_ratio": 0.43775100401606426,
+     "alpha_iid": 0.6566265060240963,
+     "E_tokens_per_step": 2.3132530120481927,
+     "greedy_equal": false,
+     "first_mismatch_index": 78,
+     "spec_wall_s": 4.8399421669892035
+    },
+    "4": {
+     "tokens": 192,
+     "steps": 75,
+     "completed_steps": 74,
+     "proposed": 298,
+     "accepted": 118,
+     "rejections": 58,
+     "tokens_in_completed_steps": 190,
+     "accept_hist": [
+      29,
+      12,
+      11,
+      6,
+      16
+     ],
+     "acc_ratio": 0.3959731543624161,
+     "alpha_iid": 0.6704545454545454,
+     "E_tokens_per_step": 2.5675675675675675,
+     "greedy_equal": false,
+     "first_mismatch_index": 78,
+     "spec_wall_s": 4.817372625053395
+    }
+   }
+  },
+  "qa": {
+   "prompt_tokens": 47,
+   "greedy_tokens": 192,
+   "plain_wall_s": 7.111271457979456,
+   "greedy_text_head": "Great question! Let's break it down step by step.\n\n### 1. **Why is the sky blue?**\n\nThe sky appears blue due to a phenomenon called **Rayleigh scattering**. Here",
+   "k": {
+    "1": {
+     "tokens": 192,
+     "steps": 117,
+     "completed_steps": 116,
+     "proposed": 117,
+     "accepted": 76,
+     "rejections": 41,
+     "tokens_in_completed_steps": 191,
+     "accept_hist": [
+      41,
+      75
+     ],
+     "acc_ratio": 0.6495726495726496,
+     "alpha_iid": 0.6495726495726496,
+     "E_tokens_per_step": 1.646551724137931,
+     "greedy_equal": true,
+     "first_mismatch_index": null,
+     "spec_wall_s": 5.264495000010356
+    },
+    "2": {
+     "tokens": 192,
+     "steps": 93,
+     "completed_steps": 92,
+     "proposed": 186,
+     "accepted": 100,
+     "rejections": 50,
+     "tokens_in_completed_steps": 190,
+     "accept_hist": [
+      36,
+      14,
+      42
+     ],
+     "acc_ratio": 0.5376344086021505,
+     "alpha_iid": 0.6666666666666666,
+     "E_tokens_per_step": 2.0652173913043477,
+     "greedy_equal": true,
+     "first_mismatch_index": null,
+     "spec_wall_s": 5.137370666954666
+    },
+    "3": {
+     "tokens": 192,
+     "steps": 77,
+     "completed_steps": 76,
+     "proposed": 229,
+     "accepted": 116,
+     "rejections": 49,
+     "tokens_in_completed_steps": 191,
+     "accept_hist": [
+      27,
+      10,
+      12,
+      27
+     ],
+     "acc_ratio": 0.5065502183406113,
+     "alpha_iid": 0.703030303030303,
+     "E_tokens_per_step": 2.513157894736842,
+     "greedy_equal": true,
+     "first_mismatch_index": null,
+     "spec_wall_s": 5.005032166023739
+    },
+    "4": {
+     "tokens": 192,
+     "steps": 74,
+     "completed_steps": 74,
+     "proposed": 296,
+     "accepted": 118,
+     "rejections": 59,
+     "tokens_in_completed_steps": 192,
+     "accept_hist": [
+      27,
+      13,
+      12,
+      7,
+      15
+     ],
+     "acc_ratio": 0.39864864864864863,
+     "alpha_iid": 0.6666666666666666,
+     "E_tokens_per_step": 2.5945945945945947,
+     "greedy_equal": true,
+     "first_mismatch_index": null,
+     "spec_wall_s": 9.053863167006057
+    }
+   }
+  },
+  "summarize": {
+   "prompt_tokens": 543,
+   "greedy_tokens": 136,
+   "plain_wall_s": 5.892479416972492,
+   "greedy_text_head": "- The river was initially frozen, requiring early morning hikes to access gauging stations buried in snow.  \n- Instruments faced technical issues, including flooding and animal damage, complicating data collection.  \n",
+   "k": {
+    "1": {
+     "tokens": 133,
+     "steps": 84,
+     "completed_steps": 84,
+     "proposed": 84,
+     "accepted": 49,
+     "rejections": 35,
+     "tokens_in_completed_steps": 133,
+     "accept_hist": [
+      35,
+      49
+     ],
+     "acc_ratio": 0.5833333333333334,
+     "alpha_iid": 0.5833333333333334,
+     "E_tokens_per_step": 1.5833333333333333,
+     "greedy_equal": false,
+     "first_mismatch_index": 71,
+     "spec_wall_s": 4.684138999960851
+    },
+    "2": {
+     "tokens": 133,
+     "steps": 67,
+     "completed_steps": 67,
+     "proposed": 134,
+     "accepted": 66,
+     "rejections": 42,
+     "tokens_in_completed_steps": 133,
+     "accept_hist": [
+      26,
+      16,
+      25
+     ],
+     "acc_ratio": 0.4925373134328358,
+     "alpha_iid": 0.6111111111111112,
+     "E_tokens_per_step": 1.9850746268656716,
+     "greedy_equal": false,
+     "first_mismatch_index": 71,
+     "spec_wall_s": 4.35541275003925
+    },
+    "3": {
+     "tokens": 133,
+     "steps": 62,
+     "completed_steps": 61,
+     "proposed": 186,
+     "accepted": 72,
+     "rejections": 46,
+     "tokens_in_completed_steps": 131,
+     "accept_hist": [
+      28,
+      11,
+      7,
+      15
+     ],
+     "acc_ratio": 0.3870967741935484,
+     "alpha_iid": 0.6101694915254238,
+     "E_tokens_per_step": 2.1475409836065573,
+     "greedy_equal": false,
+     "first_mismatch_index": 71,
+     "spec_wall_s": 4.554776875011157
+    },
+    "4": {
+     "tokens": 133,
+     "steps": 54,
+     "completed_steps": 53,
+     "proposed": 216,
+     "accepted": 80,
+     "rejections": 42,
+     "tokens_in_completed_steps": 132,
+     "accept_hist": [
+      21,
+      11,
+      6,
+      4,
+      11
+     ],
+     "acc_ratio": 0.37037037037037035,
+     "alpha_iid": 0.6557377049180327,
+     "E_tokens_per_step": 2.490566037735849,
+     "greedy_equal": false,
+     "first_mismatch_index": 71,
+     "spec_wall_s": 4.710643333033659
+    }
+   }
+  },
+  "howto": {
+   "prompt_tokens": 47,
+   "greedy_tokens": 192,
+   "plain_wall_s": 7.549858667014632,
+   "greedy_text_head": "A **hash map** (also known as a **hash table**) is a data structure that stores key-value pairs and allows for efficient insertion, deletion, and lookup operations. It uses a **hash",
+   "k": {
+    "1": {
+     "tokens": 192,
+     "steps": 111,
+     "completed_steps": 111,
+     "proposed": 111,
+     "accepted": 81,
+     "rejections": 30,
+     "tokens_in_completed_steps": 192,
+     "accept_hist": [
+      30,
+      81
+     ],
+     "acc_ratio": 0.7297297297297297,
+     "alpha_iid": 0.7297297297297297,
+     "E_tokens_per_step": 1.7297297297297298,
+     "greedy_equal": false,
+     "first_mismatch_index": 90,
+     "spec_wall_s": 5.309394624957349
+    },
+    "2": {
+     "tokens": 192,
+     "steps": 83,
+     "completed_steps": 82,
+     "proposed": 166,
+     "accepted": 110,
+     "rejections": 36,
+     "tokens_in_completed_steps": 190,
+     "accept_hist": [
+      20,
+      16,
+      46
+     ],
+     "acc_ratio": 0.6626506024096386,
+     "alpha_iid": 0.7534246575342466,
+     "E_tokens_per_step": 2.317073170731707,
+     "greedy_equal": false,
+     "first_mismatch_index": 90,
+     "spec_wall_s": 4.706965334014967
+    },
+    "3": {
+     "tokens": 192,
+     "steps": 72,
+     "completed_steps": 71,
+     "proposed": 215,
+     "accepted": 121,
+     "rejections": 43,
+     "tokens_in_completed_steps": 190,
+     "accept_hist": [
+      19,
+      13,
+      11,
+      28
+     ],
+     "acc_ratio": 0.5627906976744186,
+     "alpha_iid": 0.7378048780487805,
+     "E_tokens_per_step": 2.676056338028169,
+     "greedy_equal": false,
+     "first_mismatch_index": 90,
+     "spec_wall_s": 4.854848832997959
+    },
+    "4": {
+     "tokens": 192,
+     "steps": 64,
+     "completed_steps": 63,
+     "proposed": 256,
+     "accepted": 129,
+     "rejections": 45,
+     "tokens_in_completed_steps": 188,
+     "accept_hist": [
+      17,
+      11,
+      9,
+      8,
+      18
+     ],
+     "acc_ratio": 0.50390625,
+     "alpha_iid": 0.7413793103448276,
+     "E_tokens_per_step": 2.984126984126984,
+     "greedy_equal": false,
+     "first_mismatch_index": 90,
+     "spec_wall_s": 8.039538332959637
+    }
+   }
+  },
+  "email": {
+   "prompt_tokens": 45,
+   "greedy_tokens": 192,
+   "plain_wall_s": 8.16644354199525,
+   "greedy_text_head": "Subject: Request for Revised Schedule and Notification of Penalty Clause\n\nDear [Contractor's Name],\n\nI hope this message finds you well.\n\nI am writing to bring to your attention that the kitchen renovation,",
+   "k": {
+    "1": {
+     "tokens": 192,
+     "steps": 119,
+     "completed_steps": 118,
+     "proposed": 119,
+     "accepted": 74,
+     "rejections": 45,
+     "tokens_in_completed_steps": 191,
+     "accept_hist": [
+      45,
+      73
+     ],
+     "acc_ratio": 0.6218487394957983,
+     "alpha_iid": 0.6218487394957983,
+     "E_tokens_per_step": 1.61864406779661,
+     "greedy_equal": false,
+     "first_mismatch_index": 53,
+     "spec_wall_s": 5.874808957974892
+    },
+    "2": {
+     "tokens": 192,
+     "steps": 94,
+     "completed_steps": 93,
+     "proposed": 187,
+     "accepted": 99,
+     "rejections": 54,
+     "tokens_in_completed_steps": 191,
+     "accept_hist": [
+      34,
+      20,
+      39
+     ],
+     "acc_ratio": 0.5294117647058824,
+     "alpha_iid": 0.6470588235294118,
+     "E_tokens_per_step": 2.053763440860215,
+     "greedy_equal": false,
+     "first_mismatch_index": 53,
+     "spec_wall_s": 5.495061042020097
+    },
+    "3": {
+     "tokens": 192,
+     "steps": 83,
+     "completed_steps": 82,
+     "proposed": 247,
+     "accepted": 110,
+     "rejections": 56,
+     "tokens_in_completed_steps": 191,
+     "accept_hist": [
+      35,
+      11,
+      10,
+      26
+     ],
+     "acc_ratio": 0.44534412955465585,
+     "alpha_iid": 0.6626506024096386,
+     "E_tokens_per_step": 2.3292682926829267,
+     "greedy_equal": false,
+     "first_mismatch_index": 53,
+     "spec_wall_s": 5.3450759159750305
+    },
+    "4": {
+     "tokens": 192,
+     "steps": 75,
+     "completed_steps": 74,
+     "proposed": 296,
+     "accepted": 118,
+     "rejections": 58,
+     "tokens_in_completed_steps": 191,
+     "accept_hist": [
+      30,
+      9,
+      11,
+      7,
+      16
+     ],
+     "acc_ratio": 0.39864864864864863,
+     "alpha_iid": 0.6704545454545454,
+     "E_tokens_per_step": 2.581081081081081,
+     "greedy_equal": false,
+     "first_mismatch_index": 53,
+     "spec_wall_s": 5.315207082952838
+    }
+   }
+  },
+  "sql": {
+   "prompt_tokens": 77,
+   "greedy_tokens": 192,
+   "plain_wall_s": 7.451319958025124,
+   "greedy_text_head": "Sure! Here are the SQL queries for the given tables `customers` and `orders`, along with brief explanations for each:\n\n---\n\n### **1. Total Revenue per Country in 2024",
+   "k": {
+    "1": {
+     "tokens": 192,
+     "steps": 102,
+     "completed_steps": 101,
+     "proposed": 102,
+     "accepted": 91,
+     "rejections": 11,
+     "tokens_in_completed_steps": 191,
+     "accept_hist": [
+      11,
+      90
+     ],
+     "acc_ratio": 0.8921568627450981,
+     "alpha_iid": 0.8921568627450981,
+     "E_tokens_per_step": 1.891089108910891,
+     "greedy_equal": true,
+     "first_mismatch_index": null,
+     "spec_wall_s": 4.779420249979012
+    },
+    "2": {
+     "tokens": 192,
+     "steps": 72,
+     "completed_steps": 71,
+     "proposed": 144,
+     "accepted": 121,
+     "rejections": 17,
+     "tokens_in_completed_steps": 190,
+     "accept_hist": [
+      6,
+      11,
+      54
+     ],
+     "acc_ratio": 0.8402777777777778,
+     "alpha_iid": 0.8768115942028986,
+     "E_tokens_per_step": 2.676056338028169,
+     "greedy_equal": true,
+     "first_mismatch_index": null,
+     "spec_wall_s": 3.9395940829999745
+    },
+    "3": {
+     "tokens": 192,
+     "steps": 59,
+     "completed_steps": 58,
+     "proposed": 175,
+     "accepted": 134,
+     "rejections": 20,
+     "tokens_in_completed_steps": 191,
+     "accept_hist": [
+      6,
+      9,
+      5,
+      38
+     ],
+     "acc_ratio": 0.7657142857142857,
+     "alpha_iid": 0.8701298701298701,
+     "E_tokens_per_step": 3.293103448275862,
+     "greedy_equal": true,
+     "first_mismatch_index": null,
+     "spec_wall_s": 3.6501612919964828
+    },
+    "4": {
+     "tokens": 192,
+     "steps": 50,
+     "completed_steps": 49,
+     "proposed": 198,
+     "accepted": 143,
+     "rejections": 22,
+     "tokens_in_completed_steps": 190,
+     "accept_hist": [
+      5,
+      8,
+      2,
+      7,
+      27
+     ],
+     "acc_ratio": 0.7222222222222222,
+     "alpha_iid": 0.8666666666666667,
+     "E_tokens_per_step": 3.877551020408163,
+     "greedy_equal": true,
+     "first_mismatch_index": null,
+     "spec_wall_s": 3.489106792025268
+    }
+   }
+  }
+ },
+ "by_k": {
+  "1": {
+   "tokens": 1669,
+   "steps": 1001,
+   "completed_steps": 997,
+   "proposed": 1001,
+   "accepted": 672,
+   "rejections": 329,
+   "tokens_in_completed_steps": 1665,
+   "acc_ratio": 0.6713286713286714,
+   "alpha_iid": 0.6713286713286714,
+   "E_tokens_per_step": 1.6700100300902707,
+   "acc_ratio_range": [
+    0.544,
+    0.8921568627450981
+   ],
+   "alpha_iid_range": [
+    0.544,
+    0.8921568627450981
+   ],
+   "greedy_equal_prompts": 3,
+   "n_prompts": 9
+  },
+  "2": {
+   "tokens": 1669,
+   "steps": 780,
+   "completed_steps": 775,
+   "proposed": 1557,
+   "accepted": 894,
+   "rejections": 415,
+   "tokens_in_completed_steps": 1661,
+   "acc_ratio": 0.5741811175337187,
+   "alpha_iid": 0.6829640947288006,
+   "E_tokens_per_step": 2.1432258064516128,
+   "acc_ratio_range": [
+    0.42105263157894735,
+    0.8714285714285714
+   ],
+   "alpha_iid_range": [
+    0.5398773006134969,
+    0.8970588235294118
+   ],
+   "greedy_equal_prompts": 3,
+   "n_prompts": 9
+  },
+  "3": {
+   "tokens": 1669,
+   "steps": 687,
+   "completed_steps": 681,
+   "proposed": 2050,
+   "accepted": 988,
+   "rejections": 456,
+   "tokens_in_completed_steps": 1661,
+   "acc_ratio": 0.4819512195121951,
+   "alpha_iid": 0.6842105263157895,
+   "E_tokens_per_step": 2.4390602055800295,
+   "acc_ratio_range": [
+    0.33217993079584773,
+    0.7701149425287356
+   ],
+   "alpha_iid_range": [
+    0.5333333333333333,
+    0.8758169934640523
+   ],
+   "greedy_equal_prompts": 3,
+   "n_prompts": 9
+  },
+  "4": {
+   "tokens": 1669,
+   "steps": 625,
+   "completed_steps": 619,
+   "proposed": 2485,
+   "accepted": 1050,
+   "rejections": 473,
+   "tokens_in_completed_steps": 1658,
+   "acc_ratio": 0.4225352112676056,
+   "alpha_iid": 0.6894287590282338,
+   "E_tokens_per_step": 2.678513731825525,
+   "acc_ratio_range": [
+    0.259946949602122,
+    0.7754010695187166
+   ],
+   "alpha_iid_range": [
+    0.5240641711229946,
+    0.8950617283950617
+   ],
+   "greedy_equal_prompts": 3,
+   "n_prompts": 9
+  }
+ },
+ "meta": {
+  "timestamp": "2026-11-08T15:46:24.694787+00:00",
+  "authoritative_quality": true,
+  "timing_authoritative": false,
+  "machine": "macOS-26.5-arm64-arm-64bit",
+  "versions": {
+   "mlx": "0.32.4",
+   "mlx_lm": "0.32.2"
+  }
+ }
+}

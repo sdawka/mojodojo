@@ -1,0 +1,4 @@
+<start_of_turn>user
+List 15 practical tips for reducing household energy use, one line each, grouped under headings for heating, lighting, appliances, and habits.<end_of_turn>
+<start_of_turn>model
+

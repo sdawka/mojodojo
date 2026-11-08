@@ -1,0 +1,167 @@
+=== [07:14:24] inventory (load: { 4.10 4.06 3.20 })
+wrote /Users/sdawka/Code/llming/atlas/results/inventory.json
+{
+ "chip": "Apple M5",
+ "model": "J704",
+ "memory_bytes": 34359738368,
+ "p_cores": 4,
+ "e_cores": 6,
+ "p_l1d": 131072,
+ "p_l2": 16777216,
+ "e_l1d": 65536,
+ "e_l2": 6291456,
+ "cacheline": 128,
+ "page": 16384,
+ "sme_svl_bytes": 64,
+ "features": {
+  "FEAT_SME": 1,
+  "FEAT_SME2": 1,
+  "FEAT_SME2p1": 1,
+  "FEAT_SME_F16F16": 1,
+  "FEAT_SME_B16B16": 1,
+  "SME_I8I32": 1,
+  "SME_F16F32": 1,
+  "SME_B16F32": 1,
+  "FEAT_BF16": 1,
+  "FEAT_I8MM": 1,
+  "FEAT_DotProd": 1,
+  "FEAT_FP16": 1,
+  "FEAT_FHM": 1
+ },
+ "gpu_core_count": "\"gpu-core-count\" = 10",
+ "gpu_arch_mlx": "applegpu_g17g"
+}
+=== [07:14:25] build C + Mojo binaries (load: { 4.10 4.06 3.20 })
+/Users/sdawka/Code/llming/atlas/gpu/max_gpu_bench.mojo:153:8: warning: doc string summary should begin with a capital letter or non-alpha character, but this begins with 'k'
+    """kernel: 0 = AppleM5MatMul (NA), 1 = 8x8 simdgroup, 2 = gemv, 3 = int8 W8A8."""
+       ^
+=== [07:14:32] CPU bandwidth (load: { 4.34 4.10 3.22 })
+wrote /Users/sdawka/Code/llming/atlas/results/cpu_bandwidth_smoke.json (24 records)
+=== [07:14:36] CPU NEON/SME peak (load: { 4.23 4.09 3.22 })
+wrote /Users/sdawka/Code/llming/atlas/results/cpu_peak_smoke.json (60 records)
+=== [07:14:45] Accelerate GEMM (load: { 8.44 5.02 3.56 })
+wrote /Users/sdawka/Code/llming/atlas/results/cpu_accelerate_smoke.json (35 records)
+=== [07:14:53] MLX default (NAX) (load: { 8.01 4.98 3.56 })
+  bw copy            109.0 GB/s (sd 6.8)
+  bw read_reduce     113.9 GB/s (sd 3.5)
+  bw triad            91.8 GB/s (sd 13.9)
+  default  f32              square256             5095.6 GF/s    119.4 GB/s eff (sd 86.4, inner 2081)
+  default  f16              square256             6734.9 GF/s     78.9 GB/s eff (sd 568.5, inner 2924)
+  default  bf16             square256             6794.0 GF/s     79.6 GB/s eff (sd 393.5, inner 3931)
+  default  int8w(g64)xbf16  square256             1875.3 GF/s     18.5 GB/s eff (sd 24.0, inner 969)
+  default  int4w(g64)xbf16  square256             1846.4 GF/s     16.5 GB/s eff (sd 38.5, inner 1147)
+  default  f32              square1024            6140.2 GF/s     36.0 GB/s eff (sd 451.9, inner 54)
+  default  f16              square1024           11841.6 GF/s     34.7 GB/s eff (sd 375.9, inner 97)
+  default  bf16             square1024           12472.4 GF/s     36.5 GB/s eff (sd 600.1, inner 117)
+  default  int8w(g64)xbf16  square1024           12403.9 GF/s     30.7 GB/s eff (sd 163.6, inner 115)
+  default  int4w(g64)xbf16  square1024           13042.3 GF/s     29.1 GB/s eff (sd 152.0, inner 121)
+  default  f32              square2048            5549.9 GF/s     16.3 GB/s eff (sd 580.4, inner 10)
+  default  f16              square2048           11428.2 GF/s     16.7 GB/s eff (sd 882.7, inner 16)
+  default  bf16             square2048           10925.1 GF/s     16.0 GB/s eff (sd 1129.9, inner 14)
+  default  int8w(g64)xbf16  square2048           11027.2 GF/s     13.6 GB/s eff (sd 564.0, inner 12)
+  default  int4w(g64)xbf16  square2048           12153.7 GF/s     13.5 GB/s eff (sd 151.8, inner 15)
+  default  f32              attn_q_o_M1             57.4 GF/s    115.0 GB/s eff (sd 2.7, inner 59)
+  default  f16              attn_q_o_M1            116.5 GF/s    116.5 GB/s eff (sd 5.5, inner 99)
+  default  bf16             attn_q_o_M1            120.2 GF/s    120.3 GB/s eff (sd 3.9, inner 121)
+  default  int8w(g64)xbf16  attn_q_o_M1            219.1 GF/s    116.6 GB/s eff (sd 6.2, inner 216)
+  default  int4w(g64)xbf16  attn_q_o_M1            413.0 GF/s    116.4 GB/s eff (sd 17.1, inner 387)
+  default  f32              attn_q_o_M512         6436.2 GF/s     33.5 GB/s eff (sd 379.6, inner 14)
+  default  f16              attn_q_o_M512        10385.2 GF/s     27.0 GB/s eff (sd 444.5, inner 25)
+  default  bf16             attn_q_o_M512        10036.5 GF/s     26.1 GB/s eff (sd 607.7, inner 22)
+  default  int8w(g64)xbf16  attn_q_o_M512         9796.8 GF/s     16.5 GB/s eff (sd 863.9, inner 24)
+  default  int4w(g64)xbf16  attn_q_o_M512        11234.2 GF/s     13.5 GB/s eff (sd 309.5, inner 27)
+  default  f32              attn_kv_M1              56.0 GF/s    112.1 GB/s eff (sd 1.4, inner 152)
+  default  f16              attn_kv_M1             121.4 GF/s    121.5 GB/s eff (sd 1.7, inner 370)
+  default  bf16             attn_kv_M1             113.1 GF/s    113.2 GB/s eff (sd 4.9, inner 340)
+  default  int8w(g64)xbf16  attn_kv_M1             202.6 GF/s    107.9 GB/s eff (sd 9.4, inner 647)
+  default  int4w(g64)xbf16  attn_kv_M1             382.0 GF/s    107.9 GB/s eff (sd 4.7, inner 1154)
+  default  f32              attn_kv_M512          3704.6 GF/s     24.1 GB/s eff (sd 148.8, inner 25)
+  default  f16              attn_kv_M512          9170.0 GF/s     29.9 GB/s eff (sd 80.2, inner 43)
+  default  bf16             attn_kv_M512          9142.0 GF/s     29.8 GB/s eff (sd 218.7, inner 50)
+  default  int8w(g64)xbf16  attn_kv_M512          9630.8 GF/s     22.5 GB/s eff (sd 385.4, inner 74)
+  default  int4w(g64)xbf16  attn_kv_M512         10817.5 GF/s     20.0 GB/s eff (sd 271.9, inner 78)
+  max rel err vs fp64 (512^3): {'f32': 0.0006949219361536348, 'f16': 0.00039578300062711265, 'bf16': 0.003126862679793607}
+wrote /Users/sdawka/Code/llming/atlas/results/gpu_mlx_default_smoke.json (38 records)
+=== [07:14:59] MLX NAX disabled (load: { 7.39 4.95 3.56 })
+  nonax_g16g f32              square256             2170.1 GF/s     50.9 GB/s eff (sd 163.8, inner 602)
+  nonax_g16g f16              square256             2490.3 GF/s     29.2 GB/s eff (sd 67.1, inner 1512)
+  nonax_g16g bf16             square256             2505.5 GF/s     29.4 GB/s eff (sd 13.2, inner 1507)
+  nonax_g16g int4w(g64)xbf16  square256             1917.7 GF/s     17.1 GB/s eff (sd 47.4, inner 1114)
+  nonax_g16g f32              square1024            3161.0 GF/s     18.5 GB/s eff (sd 63.5, inner 30)
+  nonax_g16g f16              square1024            3825.7 GF/s     11.2 GB/s eff (sd 63.5, inner 32)
+  nonax_g16g bf16             square1024            3823.0 GF/s     11.2 GB/s eff (sd 25.4, inner 32)
+  nonax_g16g int4w(g64)xbf16  square1024            3273.3 GF/s      7.3 GB/s eff (sd 9.6, inner 29)
+  nonax_g16g f32              square2048            3026.8 GF/s      8.9 GB/s eff (sd 252.9, inner 4)
+  nonax_g16g f16              square2048            3803.3 GF/s      5.6 GB/s eff (sd 75.9, inner 5)
+  nonax_g16g bf16             square2048            3816.8 GF/s      5.6 GB/s eff (sd 36.2, inner 5)
+  nonax_g16g int4w(g64)xbf16  square2048            3319.2 GF/s      3.7 GB/s eff (sd 117.8, inner 4)
+  nonax_g16g f32              attn_q_o_M1             56.6 GF/s    113.3 GB/s eff (sd 2.3, inner 58)
+  nonax_g16g f16              attn_q_o_M1            116.0 GF/s    116.1 GB/s eff (sd 5.6, inner 101)
+  nonax_g16g bf16             attn_q_o_M1            114.8 GF/s    114.8 GB/s eff (sd 5.5, inner 101)
+  nonax_g16g int4w(g64)xbf16  attn_q_o_M1            394.2 GF/s    111.1 GB/s eff (sd 18.6, inner 380)
+  nonax_g16g f32              attn_q_o_M512         2955.7 GF/s     15.4 GB/s eff (sd 98.4, inner 6)
+  nonax_g16g f16              attn_q_o_M512         3703.9 GF/s      9.6 GB/s eff (sd 22.0, inner 8)
+  nonax_g16g bf16             attn_q_o_M512         3620.8 GF/s      9.4 GB/s eff (sd 57.9, inner 8)
+  nonax_g16g int4w(g64)xbf16  attn_q_o_M512         3343.6 GF/s      4.0 GB/s eff (sd 18.6, inner 7)
+  nonax_g16g f32              attn_kv_M1              56.0 GF/s    112.1 GB/s eff (sd 1.1, inner 137)
+  nonax_g16g f16              attn_kv_M1             116.7 GF/s    116.8 GB/s eff (sd 1.6, inner 354)
+  nonax_g16g bf16             attn_kv_M1             120.8 GF/s    120.9 GB/s eff (sd 2.8, inner 395)
+  nonax_g16g int4w(g64)xbf16  attn_kv_M1             392.5 GF/s    110.9 GB/s eff (sd 8.4, inner 1348)
+  nonax_g16g f32              attn_kv_M512          2827.7 GF/s     18.4 GB/s eff (sd 207.6, inner 17)
+  nonax_g16g f16              attn_kv_M512          3703.7 GF/s     12.1 GB/s eff (sd 33.0, inner 22)
+  nonax_g16g bf16             attn_kv_M512          3737.0 GF/s     12.2 GB/s eff (sd 58.9, inner 23)
+  nonax_g16g int4w(g64)xbf16  attn_kv_M512          3339.0 GF/s      6.2 GB/s eff (sd 30.9, inner 21)
+  max rel err vs fp64 (512^3): {'f32': 4.3812684523573537e-07, 'f16': 0.00039578300062711265, 'bf16': 0.003126862679793607}
+wrote /Users/sdawka/Code/llming/atlas/results/gpu_mlx_nonax_g16g_smoke.json (28 records)
+=== [07:15:04] MLX TF32 off (load: { 6.96 4.90 3.55 })
+  notf32   f32              square256             1761.0 GF/s     41.3 GB/s eff (sd 149.3, inner 1321)
+  notf32   f32              square1024            3201.7 GF/s     18.8 GB/s eff (sd 108.8, inner 28)
+  notf32   f32              square2048            3059.7 GF/s      9.0 GB/s eff (sd 103.9, inner 4)
+  notf32   f32              attn_q_o_M1             61.7 GF/s    123.4 GB/s eff (sd 1.5, inner 57)
+  notf32   f32              attn_q_o_M512         2875.2 GF/s     15.0 GB/s eff (sd 36.1, inner 5)
+  notf32   f32              attn_kv_M1              56.9 GF/s    113.9 GB/s eff (sd 1.4, inner 170)
+  notf32   f32              attn_kv_M512          2869.5 GF/s     18.7 GB/s eff (sd 115.9, inner 17)
+  max rel err vs fp64 (512^3): {'f32': 4.3812684523573537e-07, 'f16': 0.00039578300062711265, 'bf16': 0.003126862679793607}
+wrote /Users/sdawka/Code/llming/atlas/results/gpu_mlx_notf32_smoke.json (7 records)
+=== [07:15:06] MAX Mojo GPU kernels (load: { 6.96 4.90 3.55 })
+# device Apple M5 api metal compute_capability 5
+wrote /Users/sdawka/Code/llming/atlas/results/gpu_max_smoke.json (54 records)
+=== [07:15:14] Core ML / ANE (load: { 6.35 4.84 3.55 })
+  CPU_ONLY     fp16  square1024         L=4    2041.7 GF/s    0.263 ms/predict  plan={'MLCPUComputeDevice': 4}
+  CPU_AND_GPU  fp16  square1024         L=4    1400.7 GF/s    0.383 ms/predict  plan={'MLGPUComputeDevice': 4}
+  CPU_AND_NE   fp16  square1024         L=4    1352.8 GF/s    0.397 ms/predict  plan={'MLNeuralEngineComputeDevice': 4}
+  ALL          fp16  square1024         L=4    1707.5 GF/s    0.314 ms/predict  plan={'MLNeuralEngineComputeDevice': 4}
+  CPU_ONLY     w8    square1024         L=4    1761.8 GF/s    0.305 ms/predict  plan={'MLCPUComputeDevice': 4}
+  CPU_AND_GPU  w8    square1024         L=4    1386.8 GF/s    0.387 ms/predict  plan={'MLGPUComputeDevice': 4}
+  CPU_AND_NE   w8    square1024         L=4    2226.7 GF/s    0.241 ms/predict  plan={'MLNeuralEngineComputeDevice': 4}
+  ALL          w8    square1024         L=4    2524.9 GF/s    0.213 ms/predict  plan={'MLNeuralEngineComputeDevice': 4}
+  CPU_ONLY     fp16  attn_q_o_M1        L=4      46.6 GF/s    1.622 ms/predict  plan={'MLCPUComputeDevice': 4}
+  CPU_AND_GPU  fp16  attn_q_o_M1        L=4      78.0 GF/s    0.968 ms/predict  plan={'MLGPUComputeDevice': 4}
+  CPU_AND_NE   fp16  attn_q_o_M1        L=4      61.1 GF/s    1.236 ms/predict  plan={'MLNeuralEngineComputeDevice': 4}
+  ALL          fp16  attn_q_o_M1        L=4      81.5 GF/s    0.926 ms/predict  plan={'MLGPUComputeDevice': 4}
+  CPU_ONLY     w8    attn_q_o_M1        L=4      44.3 GF/s    1.706 ms/predict  plan={'MLCPUComputeDevice': 4}
+  CPU_AND_GPU  w8    attn_q_o_M1        L=4     127.8 GF/s    0.591 ms/predict  plan={'MLGPUComputeDevice': 4}
+  CPU_AND_NE   w8    attn_q_o_M1        L=4     109.3 GF/s    0.690 ms/predict  plan={'MLNeuralEngineComputeDevice': 4}
+  ALL          w8    attn_q_o_M1        L=4     128.8 GF/s    0.586 ms/predict  plan={'MLGPUComputeDevice': 4}
+  CPU_ONLY     fp16  attn_q_o_M512      L=4    2631.1 GF/s   14.692 ms/predict  plan={'MLCPUComputeDevice': 4}
+  CPU_AND_GPU  fp16  attn_q_o_M512      L=4    9105.4 GF/s    4.245 ms/predict  plan={'MLGPUComputeDevice': 4}
+  CPU_AND_NE   fp16  attn_q_o_M512      L=4    6530.5 GF/s    5.919 ms/predict  plan={'MLNeuralEngineComputeDevice': 4}
+  ALL          fp16  attn_q_o_M512      L=4    6624.4 GF/s    5.835 ms/predict  plan={'MLNeuralEngineComputeDevice': 4}
+  CPU_ONLY     w8    attn_q_o_M512      L=4    2696.8 GF/s   14.334 ms/predict  plan={'MLCPUComputeDevice': 4}
+  CPU_AND_GPU  w8    attn_q_o_M512      L=4    8508.2 GF/s    4.543 ms/predict  plan={'MLGPUComputeDevice': 4}
+  CPU_AND_NE   w8    attn_q_o_M512      L=4    9948.0 GF/s    3.886 ms/predict  plan={'MLNeuralEngineComputeDevice': 4}
+  ALL          w8    attn_q_o_M512      L=4   10043.9 GF/s    3.849 ms/predict  plan={'MLNeuralEngineComputeDevice': 4}
+wrote /Users/sdawka/Code/llming/atlas/results/ane_coreml_smoke.json (24 records)
+=== [07:15:27] ggml MUL_MAT cross-check (load: { 5.76 4.76 3.53 })
+  MTL0 f16   n=   1     104.5 GF/s (sd 11.3)
+  MTL0 q4_0  n=   1     388.5 GF/s (sd 44.6)
+  MTL0 f16   n= 512    7610.0 GF/s (sd 605.3)
+  MTL0 q4_0  n= 512    8280.0 GF/s (sd 459.0)
+  CPU f16   n=   1      86.1 GF/s (sd 16.5)
+  CPU q4_0  n=   1     177.2 GF/s (sd 62.9)
+  CPU f16   n= 512     119.2 GF/s (sd 24.1)
+  CPU q4_0  n= 512     345.8 GF/s (sd 52.0)
+wrote /Users/sdawka/Code/llming/atlas/results/ggml_mulmat_smoke.json (8 records)
+=== [07:16:25] report (load: { 15.22 7.34 4.56 })
+wrote /Users/sdawka/Code/llming/atlas/ATLAS.md
+=== [07:16:26] done. log: /Users/sdawka/Code/llming/atlas/results/run_20261108_071424_smoke.log (load: { 15.22 7.34 4.56 })

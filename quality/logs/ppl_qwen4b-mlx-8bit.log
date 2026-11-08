@@ -1,0 +1,10 @@
+[transformers] Token indices sequence length is longer than the specified maximum sequence length for this model (298938 > 131072). Running this sequence through the model will result in indexing errors
+  [4/583] ppl so far 12.8890
+  [84/583] ppl so far 13.8605
+  [164/583] ppl so far 12.8181
+  [244/583] ppl so far 13.3135
+  [324/583] ppl so far 13.4630
+  [404/583] ppl so far 14.1235
+  [484/583] ppl so far 14.1679
+  [564/583] ppl so far 13.9403
+RESULT qwen4b-mlx-8bit: ppl=14.0150 ± 0.1295 over 149248 tokens (583 chunks of 512)

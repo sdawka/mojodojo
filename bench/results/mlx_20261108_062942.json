@@ -1,0 +1,89 @@
+{
+  "runtime": "mlx",
+  "timestamp": "2026-11-08T11:28:52.816537+00:00",
+  "versions": {
+    "mlx": "0.32.4",
+    "mlx-lm": "0.32.2"
+  },
+  "machine": "macOS-26.5-arm64-arm-64bit",
+  "device": "Device(gpu, 0)",
+  "settings": {
+    "sampling": "greedy (temp=0), EOS ignored",
+    "gen_tokens": 128,
+    "reps": 3,
+    "warmup": 1,
+    "prompt_file": "/Users/sdawka/Code/llming/bench/prompt_512.txt"
+  },
+  "results": [
+    {
+      "format": "bf16",
+      "model_path": "/Users/sdawka/Code/llming/models/mlx-Llama-3.2-3B-Instruct-bf16",
+      "prompt_tokens": 512,
+      "gen_tokens": 128,
+      "pp_tps_mean": 1116.7729434350906,
+      "tg_tps_mean": 14.904386266565318,
+      "ttft_s_mean": 0.4588470970047638,
+      "pp_tps_std": 32.39395841313006,
+      "tg_tps_std": 0.35757032068644123,
+      "peak_mem_gb": 6.77869884,
+      "reps": [
+        {
+          "prompt_tokens": 512,
+          "gen_tokens": 128,
+          "ttft_s": 0.4417432500049472,
+          "pp_tps": 1159.04430909644,
+          "tg_tps": 14.931225395552852
+        },
+        {
+          "prompt_tokens": 512,
+          "gen_tokens": 128,
+          "ttft_s": 0.46087466599419713,
+          "pp_tps": 1110.9311007484334,
+          "tg_tps": 14.453651544296177
+        },
+        {
+          "prompt_tokens": 512,
+          "gen_tokens": 128,
+          "ttft_s": 0.47392337501514703,
+          "pp_tps": 1080.3434204603982,
+          "tg_tps": 15.328281859846923
+        }
+      ]
+    },
+    {
+      "format": "4bit",
+      "model_path": "/Users/sdawka/Code/llming/models/mlx-Llama-3.2-3B-Instruct-4bit",
+      "prompt_tokens": 512,
+      "gen_tokens": 128,
+      "pp_tps_mean": 1558.2569723680633,
+      "tg_tps_mean": 48.774098487102364,
+      "ttft_s_mean": 0.3287669863202609,
+      "pp_tps_std": 37.91626833296257,
+      "tg_tps_std": 0.6669192219374834,
+      "peak_mem_gb": 2.339749012,
+      "reps": [
+        {
+          "prompt_tokens": 512,
+          "gen_tokens": 128,
+          "ttft_s": 0.32854379195487127,
+          "pp_tps": 1558.3919481587047,
+          "tg_tps": 48.16675862202698
+        },
+        {
+          "prompt_tokens": 512,
+          "gen_tokens": 128,
+          "ttft_s": 0.33867991698207334,
+          "pp_tps": 1511.7518764099043,
+          "tg_tps": 48.45284795341879
+        },
+        {
+          "prompt_tokens": 512,
+          "gen_tokens": 128,
+          "ttft_s": 0.31907725002383813,
+          "pp_tps": 1604.627092535581,
+          "tg_tps": 49.70268888586133
+        }
+      ]
+    }
+  ]
+}

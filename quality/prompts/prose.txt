@@ -1,0 +1,9 @@
+<|start_header_id|>system<|end_header_id|>
+
+Cutting Knowledge Date: December 2023
+Today Date: 08 Nov 2026
+
+<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+Write a short story (about 300 words) about a lighthouse keeper who discovers that the light has started signalling back to someone out at sea.<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+

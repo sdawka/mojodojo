@@ -1,0 +1,918 @@
+{
+ "pair": "gemma4b-qatq40grid_1b-4bit",
+ "target": "/Users/sdawka/Code/llming/models/gemma3/mlx-gemma-3-4b-it-qat-q40grid",
+ "draft": "/Users/sdawka/Code/llming/models/gemma3/mlx-gemma-3-1b-it-4bit",
+ "max_tokens": 192,
+ "prompts": {
+  "raw_bench512": {
+   "prompt_tokens": 501,
+   "greedy_tokens": 192,
+   "plain_wall_s": 5.062427417025901,
+   "greedy_text_head": " was still powerful, but the flow was more consistent, and the water was clearer. I spent the next three months mapping the riverbed, measuring the width and depth of the channel, and collecting sediment",
+   "k": {
+    "1": {
+     "tokens": 192,
+     "steps": 126,
+     "completed_steps": 126,
+     "proposed": 126,
+     "accepted": 66,
+     "rejections": 60,
+     "tokens_in_completed_steps": 192,
+     "accept_hist": [
+      60,
+      66
+     ],
+     "acc_ratio": 0.5238095238095238,
+     "alpha_iid": 0.5238095238095238,
+     "E_tokens_per_step": 1.5238095238095237,
+     "greedy_equal": false,
+     "first_mismatch_index": 70,
+     "spec_wall_s": 4.605297916044947
+    },
+    "2": {
+     "tokens": 192,
+     "steps": 125,
+     "completed_steps": 125,
+     "proposed": 250,
+     "accepted": 67,
+     "rejections": 106,
+     "tokens_in_completed_steps": 192,
+     "accept_hist": [
+      77,
+      29,
+      19
+     ],
+     "acc_ratio": 0.268,
+     "alpha_iid": 0.3872832369942196,
+     "E_tokens_per_step": 1.536,
+     "greedy_equal": false,
+     "first_mismatch_index": 70,
+     "spec_wall_s": 5.39092412503669
+    },
+    "3": {
+     "tokens": 192,
+     "steps": 158,
+     "completed_steps": 158,
+     "proposed": 471,
+     "accepted": 34,
+     "rejections": 157,
+     "tokens_in_completed_steps": 192,
+     "accept_hist": [
+      127,
+      25,
+      3,
+      1
+     ],
+     "acc_ratio": 0.07218683651804671,
+     "alpha_iid": 0.17801047120418848,
+     "E_tokens_per_step": 1.2151898734177216,
+     "greedy_equal": false,
+     "first_mismatch_index": 70,
+     "spec_wall_s": 7.863624208024703
+    },
+    "4": {
+     "tokens": 192,
+     "steps": 175,
+     "completed_steps": 175,
+     "proposed": 694,
+     "accepted": 17,
+     "rejections": 175,
+     "tokens_in_completed_steps": 192,
+     "accept_hist": [
+      160,
+      9,
+      1,
+      2,
+      0
+     ],
+     "acc_ratio": 0.024495677233429394,
+     "alpha_iid": 0.08854166666666667,
+     "E_tokens_per_step": 1.0971428571428572,
+     "greedy_equal": false,
+     "first_mismatch_index": 70,
+     "spec_wall_s": 10.334118042024784
+    }
+   }
+  },
+  "prose": {
+   "prompt_tokens": 40,
+   "greedy_tokens": 192,
+   "plain_wall_s": 4.795706916949712,
+   "greedy_text_head": "The salt spray was Silas\u2019s constant companion. For thirty years, he\u2019d been the keeper of North Point Lighthouse, a solitary sentinel against the relentless grey of the North Atlantic. He knew the",
+   "k": {
+    "1": {
+     "tokens": 192,
+     "steps": 113,
+     "completed_steps": 113,
+     "proposed": 113,
+     "accepted": 79,
+     "rejections": 34,
+     "tokens_in_completed_steps": 192,
+     "accept_hist": [
+      34,
+      79
+     ],
+     "acc_ratio": 0.6991150442477876,
+     "alpha_iid": 0.6991150442477876,
+     "E_tokens_per_step": 1.6991150442477876,
+     "greedy_equal": false,
+     "first_mismatch_index": 9,
+     "spec_wall_s": 3.7407204999472015
+    },
+    "2": {
+     "tokens": 192,
+     "steps": 91,
+     "completed_steps": 91,
+     "proposed": 182,
+     "accepted": 101,
+     "rejections": 50,
+     "tokens_in_completed_steps": 192,
+     "accept_hist": [
+      31,
+      19,
+      41
+     ],
+     "acc_ratio": 0.554945054945055,
+     "alpha_iid": 0.6688741721854304,
+     "E_tokens_per_step": 2.10989010989011,
+     "greedy_equal": false,
+     "first_mismatch_index": 9,
+     "spec_wall_s": 3.591592375014443
+    },
+    "3": {
+     "tokens": 192,
+     "steps": 78,
+     "completed_steps": 78,
+     "proposed": 233,
+     "accepted": 114,
+     "rejections": 53,
+     "tokens_in_completed_steps": 192,
+     "accept_hist": [
+      24,
+      18,
+      10,
+      25
+     ],
+     "acc_ratio": 0.4892703862660944,
+     "alpha_iid": 0.6826347305389222,
+     "E_tokens_per_step": 2.4615384615384617,
+     "greedy_equal": false,
+     "first_mismatch_index": 9,
+     "spec_wall_s": 3.617163499991875
+    },
+    "4": {
+     "tokens": 192,
+     "steps": 72,
+     "completed_steps": 72,
+     "proposed": 285,
+     "accepted": 120,
+     "rejections": 55,
+     "tokens_in_completed_steps": 192,
+     "accept_hist": [
+      24,
+      13,
+      10,
+      6,
+      17
+     ],
+     "acc_ratio": 0.42105263157894735,
+     "alpha_iid": 0.6857142857142857,
+     "E_tokens_per_step": 2.6666666666666665,
+     "greedy_equal": false,
+     "first_mismatch_index": 9,
+     "spec_wall_s": 3.8271478330134414
+    }
+   }
+  },
+  "code": {
+   "prompt_tokens": 55,
+   "greedy_tokens": 192,
+   "plain_wall_s": 4.733006499998737,
+   "greedy_text_head": "```python\nfrom collections import defaultdict\nfrom typing import List, Tuple\n\ndef parse_apache_log(log_file: str) -> Tuple[List[str], List[str]]:\n",
+   "k": {
+    "1": {
+     "tokens": 192,
+     "steps": 99,
+     "completed_steps": 99,
+     "proposed": 99,
+     "accepted": 93,
+     "rejections": 6,
+     "tokens_in_completed_steps": 192,
+     "accept_hist": [
+      6,
+      93
+     ],
+     "acc_ratio": 0.9393939393939394,
+     "alpha_iid": 0.9393939393939394,
+     "E_tokens_per_step": 1.9393939393939394,
+     "greedy_equal": false,
+     "first_mismatch_index": 25,
+     "spec_wall_s": 3.316645749961026
+    },
+    "2": {
+     "tokens": 192,
+     "steps": 68,
+     "completed_steps": 68,
+     "proposed": 136,
+     "accepted": 124,
+     "rejections": 9,
+     "tokens_in_completed_steps": 192,
+     "accept_hist": [
+      3,
+      6,
+      59
+     ],
+     "acc_ratio": 0.9117647058823529,
+     "alpha_iid": 0.9323308270676691,
+     "E_tokens_per_step": 2.823529411764706,
+     "greedy_equal": false,
+     "first_mismatch_index": 25,
+     "spec_wall_s": 2.7707122499705292
+    },
+    "3": {
+     "tokens": 192,
+     "steps": 53,
+     "completed_steps": 53,
+     "proposed": 159,
+     "accepted": 139,
+     "rejections": 8,
+     "tokens_in_completed_steps": 192,
+     "accept_hist": [
+      5,
+      2,
+      1,
+      45
+     ],
+     "acc_ratio": 0.8742138364779874,
+     "alpha_iid": 0.9455782312925171,
+     "E_tokens_per_step": 3.6226415094339623,
+     "greedy_equal": false,
+     "first_mismatch_index": 25,
+     "spec_wall_s": 2.52329295797972
+    },
+    "4": {
+     "tokens": 192,
+     "steps": 43,
+     "completed_steps": 43,
+     "proposed": 172,
+     "accepted": 149,
+     "rejections": 9,
+     "tokens_in_completed_steps": 192,
+     "accept_hist": [
+      2,
+      4,
+      0,
+      3,
+      34
+     ],
+     "acc_ratio": 0.8662790697674418,
+     "alpha_iid": 0.9430379746835443,
+     "E_tokens_per_step": 4.465116279069767,
+     "greedy_equal": false,
+     "first_mismatch_index": 25,
+     "spec_wall_s": 2.373156957968604
+    }
+   }
+  },
+  "list": {
+   "prompt_tokens": 38,
+   "greedy_tokens": 192,
+   "plain_wall_s": 4.719432707992382,
+   "greedy_text_head": "Okay, here are 15 practical tips for reducing household energy use, grouped as requested, with one line each:\n\n**Heating**\n\n1.  Lower your thermostat by a degree or two",
+   "k": {
+    "1": {
+     "tokens": 192,
+     "steps": 106,
+     "completed_steps": 106,
+     "proposed": 106,
+     "accepted": 86,
+     "rejections": 20,
+     "tokens_in_completed_steps": 192,
+     "accept_hist": [
+      20,
+      86
+     ],
+     "acc_ratio": 0.8113207547169812,
+     "alpha_iid": 0.8113207547169812,
+     "E_tokens_per_step": 1.8113207547169812,
+     "greedy_equal": false,
+     "first_mismatch_index": 37,
+     "spec_wall_s": 3.510204583988525
+    },
+    "2": {
+     "tokens": 192,
+     "steps": 77,
+     "completed_steps": 76,
+     "proposed": 154,
+     "accepted": 116,
+     "rejections": 23,
+     "tokens_in_completed_steps": 190,
+     "accept_hist": [
+      15,
+      8,
+      53
+     ],
+     "acc_ratio": 0.7532467532467533,
+     "alpha_iid": 0.8345323741007195,
+     "E_tokens_per_step": 2.5,
+     "greedy_equal": false,
+     "first_mismatch_index": 37,
+     "spec_wall_s": 3.0717153750010766
+    },
+    "3": {
+     "tokens": 192,
+     "steps": 57,
+     "completed_steps": 56,
+     "proposed": 170,
+     "accepted": 136,
+     "rejections": 23,
+     "tokens_in_completed_steps": 190,
+     "accept_hist": [
+      4,
+      3,
+      16,
+      33
+     ],
+     "acc_ratio": 0.8,
+     "alpha_iid": 0.8553459119496856,
+     "E_tokens_per_step": 3.392857142857143,
+     "greedy_equal": false,
+     "first_mismatch_index": 37,
+     "spec_wall_s": 2.6843249580124393
+    },
+    "4": {
+     "tokens": 192,
+     "steps": 54,
+     "completed_steps": 53,
+     "proposed": 214,
+     "accepted": 139,
+     "rejections": 31,
+     "tokens_in_completed_steps": 190,
+     "accept_hist": [
+      5,
+      10,
+      9,
+      7,
+      22
+     ],
+     "acc_ratio": 0.6495327102803738,
+     "alpha_iid": 0.8176470588235294,
+     "E_tokens_per_step": 3.5849056603773586,
+     "greedy_equal": false,
+     "first_mismatch_index": 37,
+     "spec_wall_s": 2.878878417017404
+    }
+   }
+  },
+  "qa": {
+   "prompt_tokens": 43,
+   "greedy_tokens": 192,
+   "plain_wall_s": 4.7173621249967255,
+   "greedy_text_head": "Okay, let's break down the science behind the blue sky and red sunsets, and then tackle the violet question.\n\n**Why is the Sky Blue?**\n\nThe blue color of the sky",
+   "k": {
+    "1": {
+     "tokens": 192,
+     "steps": 108,
+     "completed_steps": 107,
+     "proposed": 108,
+     "accepted": 85,
+     "rejections": 23,
+     "tokens_in_completed_steps": 191,
+     "accept_hist": [
+      23,
+      84
+     ],
+     "acc_ratio": 0.7870370370370371,
+     "alpha_iid": 0.7870370370370371,
+     "E_tokens_per_step": 1.7850467289719627,
+     "greedy_equal": false,
+     "first_mismatch_index": 73,
+     "spec_wall_s": 3.5571428339462727
+    },
+    "2": {
+     "tokens": 192,
+     "steps": 79,
+     "completed_steps": 78,
+     "proposed": 157,
+     "accepted": 114,
+     "rejections": 28,
+     "tokens_in_completed_steps": 191,
+     "accept_hist": [
+      15,
+      13,
+      50
+     ],
+     "acc_ratio": 0.7261146496815286,
+     "alpha_iid": 0.8028169014084507,
+     "E_tokens_per_step": 2.448717948717949,
+     "greedy_equal": false,
+     "first_mismatch_index": 73,
+     "spec_wall_s": 3.152706583030522
+    },
+    "3": {
+     "tokens": 192,
+     "steps": 68,
+     "completed_steps": 67,
+     "proposed": 202,
+     "accepted": 125,
+     "rejections": 34,
+     "tokens_in_completed_steps": 191,
+     "accept_hist": [
+      16,
+      11,
+      7,
+      33
+     ],
+     "acc_ratio": 0.6188118811881188,
+     "alpha_iid": 0.7861635220125787,
+     "E_tokens_per_step": 2.8507462686567164,
+     "greedy_equal": false,
+     "first_mismatch_index": 73,
+     "spec_wall_s": 3.160777750017587
+    },
+    "4": {
+     "tokens": 192,
+     "steps": 57,
+     "completed_steps": 56,
+     "proposed": 227,
+     "accepted": 136,
+     "rejections": 31,
+     "tokens_in_completed_steps": 189,
+     "accept_hist": [
+      14,
+      6,
+      6,
+      5,
+      25
+     ],
+     "acc_ratio": 0.5991189427312775,
+     "alpha_iid": 0.8143712574850299,
+     "E_tokens_per_step": 3.375,
+     "greedy_equal": false,
+     "first_mismatch_index": 73,
+     "spec_wall_s": 3.0657972500193864
+    }
+   }
+  },
+  "summarize": {
+   "prompt_tokens": 529,
+   "greedy_tokens": 192,
+   "plain_wall_s": 5.074005667003803,
+   "greedy_text_head": "Okay, here's a 5-bullet point summary of the excerpt, followed by a one-sentence takeaway:\n\n**Summary:**\n\n*   **Initial Conditions:** The river valley was frozen",
+   "k": {
+    "1": {
+     "tokens": 192,
+     "steps": 118,
+     "completed_steps": 117,
+     "proposed": 118,
+     "accepted": 75,
+     "rejections": 43,
+     "tokens_in_completed_steps": 191,
+     "accept_hist": [
+      43,
+      74
+     ],
+     "acc_ratio": 0.635593220338983,
+     "alpha_iid": 0.635593220338983,
+     "E_tokens_per_step": 1.6324786324786325,
+     "greedy_equal": false,
+     "first_mismatch_index": 47,
+     "spec_wall_s": 4.436624291993212
+    },
+    "2": {
+     "tokens": 192,
+     "steps": 101,
+     "completed_steps": 101,
+     "proposed": 201,
+     "accepted": 91,
+     "rejections": 63,
+     "tokens_in_completed_steps": 192,
+     "accept_hist": [
+      47,
+      15,
+      38
+     ],
+     "acc_ratio": 0.4527363184079602,
+     "alpha_iid": 0.5909090909090909,
+     "E_tokens_per_step": 1.900990099009901,
+     "greedy_equal": false,
+     "first_mismatch_index": 47,
+     "spec_wall_s": 4.566908833046909
+    },
+    "3": {
+     "tokens": 192,
+     "steps": 169,
+     "completed_steps": 169,
+     "proposed": 504,
+     "accepted": 23,
+     "rejections": 168,
+     "tokens_in_completed_steps": 192,
+     "accept_hist": [
+      149,
+      14,
+      3,
+      1
+     ],
+     "acc_ratio": 0.04563492063492063,
+     "alpha_iid": 0.12041884816753927,
+     "E_tokens_per_step": 1.136094674556213,
+     "greedy_equal": false,
+     "first_mismatch_index": 47,
+     "spec_wall_s": 8.423535292036831
+    },
+    "4": {
+     "tokens": 192,
+     "steps": 159,
+     "completed_steps": 159,
+     "proposed": 630,
+     "accepted": 33,
+     "rejections": 158,
+     "tokens_in_completed_steps": 192,
+     "accept_hist": [
+      131,
+      19,
+      5,
+      0,
+      1
+     ],
+     "acc_ratio": 0.05238095238095238,
+     "alpha_iid": 0.17277486910994763,
+     "E_tokens_per_step": 1.2075471698113207,
+     "greedy_equal": false,
+     "first_mismatch_index": 47,
+     "spec_wall_s": 8.956381375028286
+    }
+   }
+  },
+  "howto": {
+   "prompt_tokens": 44,
+   "greedy_tokens": 192,
+   "plain_wall_s": 4.750885874964297,
+   "greedy_text_head": "Okay, let's break down how a hash map (also known as a hash table) works internally. It's a powerful data structure for fast key-value lookups, but understanding its",
+   "k": {
+    "1": {
+     "tokens": 192,
+     "steps": 112,
+     "completed_steps": 111,
+     "proposed": 112,
+     "accepted": 81,
+     "rejections": 31,
+     "tokens_in_completed_steps": 191,
+     "accept_hist": [
+      31,
+      80
+     ],
+     "acc_ratio": 0.7232142857142857,
+     "alpha_iid": 0.7232142857142857,
+     "E_tokens_per_step": 1.7207207207207207,
+     "greedy_equal": true,
+     "first_mismatch_index": null,
+     "spec_wall_s": 3.749206791049801
+    },
+    "2": {
+     "tokens": 192,
+     "steps": 84,
+     "completed_steps": 84,
+     "proposed": 168,
+     "accepted": 108,
+     "rejections": 38,
+     "tokens_in_completed_steps": 192,
+     "accept_hist": [
+      22,
+      16,
+      46
+     ],
+     "acc_ratio": 0.6428571428571429,
+     "alpha_iid": 0.7397260273972602,
+     "E_tokens_per_step": 2.2857142857142856,
+     "greedy_equal": true,
+     "first_mismatch_index": null,
+     "spec_wall_s": 3.3761592919472605
+    },
+    "3": {
+     "tokens": 192,
+     "steps": 71,
+     "completed_steps": 70,
+     "proposed": 213,
+     "accepted": 122,
+     "rejections": 40,
+     "tokens_in_completed_steps": 189,
+     "accept_hist": [
+      21,
+      9,
+      10,
+      30
+     ],
+     "acc_ratio": 0.5727699530516432,
+     "alpha_iid": 0.7530864197530864,
+     "E_tokens_per_step": 2.7,
+     "greedy_equal": true,
+     "first_mismatch_index": null,
+     "spec_wall_s": 3.33837095904164
+    },
+    "4": {
+     "tokens": 192,
+     "steps": 62,
+     "completed_steps": 61,
+     "proposed": 247,
+     "accepted": 131,
+     "rejections": 39,
+     "tokens_in_completed_steps": 189,
+     "accept_hist": [
+      18,
+      8,
+      7,
+      6,
+      22
+     ],
+     "acc_ratio": 0.5303643724696356,
+     "alpha_iid": 0.7705882352941177,
+     "E_tokens_per_step": 3.098360655737705,
+     "greedy_equal": true,
+     "first_mismatch_index": null,
+     "spec_wall_s": 3.3245721670100465
+    }
+   }
+  },
+  "email": {
+   "prompt_tokens": 42,
+   "greedy_tokens": 192,
+   "plain_wall_s": 4.7450396249769256,
+   "greedy_text_head": "Okay, here are a few drafts, ranging from slightly more formal to a bit more direct, incorporating a polite but firm tone. Choose the one that best suits your relationship with the contractor and the overall",
+   "k": {
+    "1": {
+     "tokens": 192,
+     "steps": 112,
+     "completed_steps": 111,
+     "proposed": 112,
+     "accepted": 81,
+     "rejections": 31,
+     "tokens_in_completed_steps": 191,
+     "accept_hist": [
+      31,
+      80
+     ],
+     "acc_ratio": 0.7232142857142857,
+     "alpha_iid": 0.7232142857142857,
+     "E_tokens_per_step": 1.7207207207207207,
+     "greedy_equal": false,
+     "first_mismatch_index": 20,
+     "spec_wall_s": 3.702798833954148
+    },
+    "2": {
+     "tokens": 192,
+     "steps": 87,
+     "completed_steps": 86,
+     "proposed": 173,
+     "accepted": 106,
+     "rejections": 41,
+     "tokens_in_completed_steps": 191,
+     "accept_hist": [
+      26,
+      15,
+      45
+     ],
+     "acc_ratio": 0.6127167630057804,
+     "alpha_iid": 0.7210884353741497,
+     "E_tokens_per_step": 2.2209302325581395,
+     "greedy_equal": false,
+     "first_mismatch_index": 20,
+     "spec_wall_s": 3.4303483329713345
+    },
+    "3": {
+     "tokens": 192,
+     "steps": 75,
+     "completed_steps": 74,
+     "proposed": 222,
+     "accepted": 118,
+     "rejections": 44,
+     "tokens_in_completed_steps": 191,
+     "accept_hist": [
+      23,
+      13,
+      7,
+      30
+     ],
+     "acc_ratio": 0.5315315315315315,
+     "alpha_iid": 0.7283950617283951,
+     "E_tokens_per_step": 2.581081081081081,
+     "greedy_equal": false,
+     "first_mismatch_index": 20,
+     "spec_wall_s": 3.4968065829598345
+    },
+    "4": {
+     "tokens": 192,
+     "steps": 69,
+     "completed_steps": 68,
+     "proposed": 270,
+     "accepted": 124,
+     "rejections": 51,
+     "tokens_in_completed_steps": 191,
+     "accept_hist": [
+      20,
+      12,
+      8,
+      9,
+      17
+     ],
+     "acc_ratio": 0.45925925925925926,
+     "alpha_iid": 0.7085714285714285,
+     "E_tokens_per_step": 2.8088235294117645,
+     "greedy_equal": false,
+     "first_mismatch_index": 20,
+     "spec_wall_s": 3.6691174170118757
+    }
+   }
+  },
+  "sql": {
+   "prompt_tokens": 78,
+   "greedy_tokens": 192,
+   "plain_wall_s": 4.800415334000718,
+   "greedy_text_head": "Okay, let's break down these SQL queries with explanations.\n\n**1. Total Revenue per Country in 2024**\n\n```sql\nSELECT\n    c.country,\n",
+   "k": {
+    "1": {
+     "tokens": 192,
+     "steps": 99,
+     "completed_steps": 98,
+     "proposed": 99,
+     "accepted": 94,
+     "rejections": 5,
+     "tokens_in_completed_steps": 191,
+     "accept_hist": [
+      5,
+      93
+     ],
+     "acc_ratio": 0.9494949494949495,
+     "alpha_iid": 0.9494949494949495,
+     "E_tokens_per_step": 1.9489795918367347,
+     "greedy_equal": true,
+     "first_mismatch_index": null,
+     "spec_wall_s": 3.3763314579846337
+    },
+    "2": {
+     "tokens": 192,
+     "steps": 69,
+     "completed_steps": 68,
+     "proposed": 138,
+     "accepted": 124,
+     "rejections": 10,
+     "tokens_in_completed_steps": 190,
+     "accept_hist": [
+      4,
+      6,
+      58
+     ],
+     "acc_ratio": 0.8985507246376812,
+     "alpha_iid": 0.9253731343283582,
+     "E_tokens_per_step": 2.7941176470588234,
+     "greedy_equal": true,
+     "first_mismatch_index": null,
+     "spec_wall_s": 2.8460237919935025
+    },
+    "3": {
+     "tokens": 192,
+     "steps": 54,
+     "completed_steps": 53,
+     "proposed": 160,
+     "accepted": 139,
+     "rejections": 9,
+     "tokens_in_completed_steps": 191,
+     "accept_hist": [
+      4,
+      4,
+      1,
+      44
+     ],
+     "acc_ratio": 0.86875,
+     "alpha_iid": 0.9391891891891891,
+     "E_tokens_per_step": 3.6037735849056602,
+     "greedy_equal": true,
+     "first_mismatch_index": null,
+     "spec_wall_s": 2.6115759590175003
+    },
+    "4": {
+     "tokens": 192,
+     "steps": 44,
+     "completed_steps": 43,
+     "proposed": 174,
+     "accepted": 149,
+     "rejections": 10,
+     "tokens_in_completed_steps": 190,
+     "accept_hist": [
+      3,
+      2,
+      2,
+      3,
+      33
+     ],
+     "acc_ratio": 0.8563218390804598,
+     "alpha_iid": 0.9371069182389937,
+     "E_tokens_per_step": 4.4186046511627906,
+     "greedy_equal": true,
+     "first_mismatch_index": null,
+     "spec_wall_s": 2.4530201670131646
+    }
+   }
+  }
+ },
+ "by_k": {
+  "1": {
+   "tokens": 1728,
+   "steps": 993,
+   "completed_steps": 988,
+   "proposed": 993,
+   "accepted": 740,
+   "rejections": 253,
+   "tokens_in_completed_steps": 1723,
+   "acc_ratio": 0.7452165156092648,
+   "alpha_iid": 0.7452165156092648,
+   "E_tokens_per_step": 1.7439271255060729,
+   "acc_ratio_range": [
+    0.5238095238095238,
+    0.9494949494949495
+   ],
+   "alpha_iid_range": [
+    0.5238095238095238,
+    0.9494949494949495
+   ],
+   "greedy_equal_prompts": 2,
+   "n_prompts": 9
+  },
+  "2": {
+   "tokens": 1728,
+   "steps": 781,
+   "completed_steps": 777,
+   "proposed": 1559,
+   "accepted": 951,
+   "rejections": 368,
+   "tokens_in_completed_steps": 1722,
+   "acc_ratio": 0.6100064143681847,
+   "alpha_iid": 0.7210007581501138,
+   "E_tokens_per_step": 2.2162162162162162,
+   "acc_ratio_range": [
+    0.268,
+    0.9117647058823529
+   ],
+   "alpha_iid_range": [
+    0.3872832369942196,
+    0.9323308270676691
+   ],
+   "greedy_equal_prompts": 2,
+   "n_prompts": 9
+  },
+  "3": {
+   "tokens": 1728,
+   "steps": 783,
+   "completed_steps": 778,
+   "proposed": 2334,
+   "accepted": 950,
+   "rejections": 536,
+   "tokens_in_completed_steps": 1720,
+   "acc_ratio": 0.4070265638389032,
+   "alpha_iid": 0.639300134589502,
+   "E_tokens_per_step": 2.210796915167095,
+   "acc_ratio_range": [
+    0.04563492063492063,
+    0.8742138364779874
+   ],
+   "alpha_iid_range": [
+    0.12041884816753927,
+    0.9455782312925171
+   ],
+   "greedy_equal_prompts": 2,
+   "n_prompts": 9
+  },
+  "4": {
+   "tokens": 1728,
+   "steps": 735,
+   "completed_steps": 730,
+   "proposed": 2913,
+   "accepted": 998,
+   "rejections": 559,
+   "tokens_in_completed_steps": 1717,
+   "acc_ratio": 0.34260212838997595,
+   "alpha_iid": 0.6409762363519589,
+   "E_tokens_per_step": 2.352054794520548,
+   "acc_ratio_range": [
+    0.024495677233429394,
+    0.8662790697674418
+   ],
+   "alpha_iid_range": [
+    0.08854166666666667,
+    0.9430379746835443
+   ],
+   "greedy_equal_prompts": 2,
+   "n_prompts": 9
+  }
+ },
+ "meta": {
+  "timestamp": "2026-11-08T19:10:21.227396+00:00",
+  "authoritative_quality": true,
+  "timing_authoritative": false,
+  "machine": "macOS-26.5-arm64-arm-64bit",
+  "versions": {
+   "mlx": "0.32.4",
+   "mlx_lm": "0.32.2"
+  }
+ }
+}

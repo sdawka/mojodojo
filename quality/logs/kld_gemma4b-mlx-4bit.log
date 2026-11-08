@@ -1,0 +1,2 @@
+[transformers] Token indices sequence length is longer than the specified maximum sequence length for this model (292282 > 131072). Running this sequence through the model will result in indexing errors
+RESULT gemma4b-mlx-4bit: mean KLD 0.24694 ± 0.00472, median 0.07454, p99 3.0736, same top-1 81.44% over 16384 tokens (64 chunks)

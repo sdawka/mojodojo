@@ -1,0 +1,9 @@
+<|start_header_id|>system<|end_header_id|>
+
+Cutting Knowledge Date: December 2023
+Today Date: 08 Nov 2026
+
+<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+How does a hash map work internally? Cover hashing, buckets, collision resolution (chaining vs open addressing), load factor and resizing, and the time complexity of each operation.<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+

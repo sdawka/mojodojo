@@ -1,0 +1,838 @@
+{
+ "status": "full-pipeline",
+ "authoritative": false,
+ "date": "2026-11-08",
+ "model": "Llama-3.2-3B-Instruct bf16 (MAX 26.8.0.dev2026110805, Apple M5 GPU)",
+ "integration": "MAX custom op phantom_matmul_i8 (Mojo, host CPU) inside the stock LlamaForCausalLM_ModuleV3 pipeline via --custom-architectures fpga/maxop/phantom_llama (class-swapped projections)",
+ "route_config": {
+  "demo_routes": {
+   "bf16": {
+    "PHANTOM_MODE": "bf16"
+   },
+   "ph_l0": {
+    "PHANTOM_MODE": "phantom",
+    "PHANTOM_ROUTE": "0:mlp"
+   },
+   "ph_all": {
+    "PHANTOM_MODE": "phantom",
+    "PHANTOM_ROUTE": "all:all"
+   },
+   "fq_all": {
+    "PHANTOM_MODE": "w8a8_gpu",
+    "PHANTOM_ROUTE": "all:all"
+   },
+   "dev_l0": {
+    "PHANTOM_MODE": "phantom",
+    "PHANTOM_ROUTE": "0:mlp",
+    "PHANTOM_BACKEND": "device",
+    "PHANTOM_DEVICE_N": "16"
+   }
+  },
+  "quantization": "W8A8 symmetric: per-token int8 activations, per-output-channel int8 weights, int32 accumulate, dequant to bf16"
+ },
+ "greedy_match": {
+  "ph_l0_vs_bf16": {
+   "prompts": 8,
+   "greedy_full_match": "7/8",
+   "greedy_prefix_tokens": "63/64",
+   "prefill_top1_match": "8/8"
+  },
+  "ph_all_vs_bf16": {
+   "prompts": 8,
+   "greedy_full_match": "5/8",
+   "greedy_prefix_tokens": "56/64",
+   "prefill_top1_match": "8/8"
+  },
+  "fq_all_vs_bf16": {
+   "prompts": 8,
+   "greedy_full_match": "5/8",
+   "greedy_prefix_tokens": "56/64",
+   "prefill_top1_match": "8/8"
+  },
+  "ph_all_vs_fq_all": {
+   "prompts": 8,
+   "greedy_full_match": "8/8",
+   "greedy_prefix_tokens": "64/64",
+   "prefill_top1_match": "8/8"
+  },
+  "dev_l0_vs_ph_l0": {
+   "prompts": 2,
+   "greedy_full_match": "2/2",
+   "greedy_prefix_tokens": "6/6",
+   "prefill_top1_match": "2/2"
+  }
+ },
+ "w8a8_quality": {
+  "ph_l0_vs_bf16": {
+   "prompts": 8,
+   "greedy_full_match": "7/8",
+   "greedy_prefix_tokens": "63/64",
+   "prefill_top1_match": "8/8",
+   "prefill_logit_cosine_min": 0.9990764522885108,
+   "prefill_logit_cosine_mean": 0.9997518101894762,
+   "prefill_kl_mean": 0.0014027983221135817,
+   "per_prompt": [
+    {
+     "prompt": 0,
+     "prompt_tokens": 6,
+     "matching_prefix": 8,
+     "of": 8
+    },
+    {
+     "prompt": 1,
+     "prompt_tokens": 12,
+     "matching_prefix": 8,
+     "of": 8
+    },
+    {
+     "prompt": 2,
+     "prompt_tokens": 11,
+     "matching_prefix": 8,
+     "of": 8
+    },
+    {
+     "prompt": 3,
+     "prompt_tokens": 10,
+     "matching_prefix": 8,
+     "of": 8
+    },
+    {
+     "prompt": 4,
+     "prompt_tokens": 5,
+     "matching_prefix": 8,
+     "of": 8
+    },
+    {
+     "prompt": 5,
+     "prompt_tokens": 9,
+     "matching_prefix": 8,
+     "of": 8
+    },
+    {
+     "prompt": 6,
+     "prompt_tokens": 11,
+     "matching_prefix": 8,
+     "of": 8
+    },
+    {
+     "prompt": 7,
+     "prompt_tokens": 14,
+     "matching_prefix": 7,
+     "of": 8
+    }
+   ]
+  },
+  "ph_all_vs_bf16": {
+   "prompts": 8,
+   "greedy_full_match": "5/8",
+   "greedy_prefix_tokens": "56/64",
+   "prefill_top1_match": "8/8",
+   "prefill_logit_cosine_min": 0.9735407296344538,
+   "prefill_logit_cosine_mean": 0.9932428972056186,
+   "prefill_kl_mean": 0.017420114772514848,
+   "per_prompt": [
+    {
+     "prompt": 0,
+     "prompt_tokens": 6,
+     "matching_prefix": 5,
+     "of": 8
+    },
+    {
+     "prompt": 1,
+     "prompt_tokens": 12,
+     "matching_prefix": 4,
+     "of": 8
+    },
+    {
+     "prompt": 2,
+     "prompt_tokens": 11,
+     "matching_prefix": 8,
+     "of": 8
+    },
+    {
+     "prompt": 3,
+     "prompt_tokens": 10,
+     "matching_prefix": 8,
+     "of": 8
+    },
+    {
+     "prompt": 4,
+     "prompt_tokens": 5,
+     "matching_prefix": 8,
+     "of": 8
+    },
+    {
+     "prompt": 5,
+     "prompt_tokens": 9,
+     "matching_prefix": 8,
+     "of": 8
+    },
+    {
+     "prompt": 6,
+     "prompt_tokens": 11,
+     "matching_prefix": 8,
+     "of": 8
+    },
+    {
+     "prompt": 7,
+     "prompt_tokens": 14,
+     "matching_prefix": 7,
+     "of": 8
+    }
+   ]
+  },
+  "fq_all_vs_bf16": {
+   "prompts": 8,
+   "greedy_full_match": "5/8",
+   "greedy_prefix_tokens": "56/64",
+   "prefill_top1_match": "8/8",
+   "prefill_logit_cosine_min": 0.9735407296344538,
+   "prefill_logit_cosine_mean": 0.9932428972056186,
+   "prefill_kl_mean": 0.017420114772514848,
+   "per_prompt": [
+    {
+     "prompt": 0,
+     "prompt_tokens": 6,
+     "matching_prefix": 5,
+     "of": 8
+    },
+    {
+     "prompt": 1,
+     "prompt_tokens": 12,
+     "matching_prefix": 4,
+     "of": 8
+    },
+    {
+     "prompt": 2,
+     "prompt_tokens": 11,
+     "matching_prefix": 8,
+     "of": 8
+    },
+    {
+     "prompt": 3,
+     "prompt_tokens": 10,
+     "matching_prefix": 8,
+     "of": 8
+    },
+    {
+     "prompt": 4,
+     "prompt_tokens": 5,
+     "matching_prefix": 8,
+     "of": 8
+    },
+    {
+     "prompt": 5,
+     "prompt_tokens": 9,
+     "matching_prefix": 8,
+     "of": 8
+    },
+    {
+     "prompt": 6,
+     "prompt_tokens": 11,
+     "matching_prefix": 8,
+     "of": 8
+    },
+    {
+     "prompt": 7,
+     "prompt_tokens": 14,
+     "matching_prefix": 7,
+     "of": 8
+    }
+   ]
+  },
+  "ph_all_vs_fq_all": {
+   "prompts": 8,
+   "greedy_full_match": "8/8",
+   "greedy_prefix_tokens": "64/64",
+   "prefill_top1_match": "8/8",
+   "prefill_logit_cosine_min": 0.9999999999999998,
+   "prefill_logit_cosine_mean": 1.0,
+   "prefill_kl_mean": 0.0,
+   "per_prompt": [
+    {
+     "prompt": 0,
+     "prompt_tokens": 6,
+     "matching_prefix": 8,
+     "of": 8
+    },
+    {
+     "prompt": 1,
+     "prompt_tokens": 12,
+     "matching_prefix": 8,
+     "of": 8
+    },
+    {
+     "prompt": 2,
+     "prompt_tokens": 11,
+     "matching_prefix": 8,
+     "of": 8
+    },
+    {
+     "prompt": 3,
+     "prompt_tokens": 10,
+     "matching_prefix": 8,
+     "of": 8
+    },
+    {
+     "prompt": 4,
+     "prompt_tokens": 5,
+     "matching_prefix": 8,
+     "of": 8
+    },
+    {
+     "prompt": 5,
+     "prompt_tokens": 9,
+     "matching_prefix": 8,
+     "of": 8
+    },
+    {
+     "prompt": 6,
+     "prompt_tokens": 11,
+     "matching_prefix": 8,
+     "of": 8
+    },
+    {
+     "prompt": 7,
+     "prompt_tokens": 14,
+     "matching_prefix": 8,
+     "of": 8
+    }
+   ]
+  },
+  "dev_l0_vs_ph_l0": {
+   "prompts": 2,
+   "greedy_full_match": "2/2",
+   "greedy_prefix_tokens": "6/6",
+   "prefill_top1_match": "2/2",
+   "prefill_logit_cosine_min": 1.0,
+   "prefill_logit_cosine_mean": 1.0,
+   "prefill_kl_mean": 0.0,
+   "per_prompt": [
+    {
+     "prompt": 0,
+     "prompt_tokens": 6,
+     "matching_prefix": 3,
+     "of": 3
+    },
+    {
+     "prompt": 1,
+     "prompt_tokens": 12,
+     "matching_prefix": 3,
+     "of": 3
+    }
+   ]
+  },
+  "ph_all_vs_bf16_512tok": {
+   "prompt_tokens": 512,
+   "next_token_match": true,
+   "logit_cosine": 0.9988542923577373
+  }
+ },
+ "tests": {
+  "op_exact": [
+   {
+    "layer": 0,
+    "proj": "qkv",
+    "M": 37,
+    "K": 3072,
+    "N_out": 5120,
+    "int32_exact": true,
+    "quant_tie_diffs": {
+     "qa": 0,
+     "qw": 575
+    },
+    "seconds": 0.094
+   },
+   {
+    "layer": 0,
+    "proj": "o",
+    "M": 37,
+    "K": 3072,
+    "N_out": 3072,
+    "int32_exact": true,
+    "quant_tie_diffs": {
+     "qa": 0,
+     "qw": 265
+    },
+    "seconds": 0.015
+   },
+   {
+    "layer": 0,
+    "proj": "gate_up",
+    "M": 37,
+    "K": 3072,
+    "N_out": 16384,
+    "int32_exact": true,
+    "quant_tie_diffs": {
+     "qa": 0,
+     "qw": 5008
+    },
+    "seconds": 0.077
+   },
+   {
+    "layer": 0,
+    "proj": "down",
+    "M": 37,
+    "K": 8192,
+    "N_out": 3072,
+    "int32_exact": true,
+    "quant_tie_diffs": {
+     "qa": 0,
+     "qw": 2363
+    },
+    "seconds": 0.041
+   },
+   {
+    "layer": 27,
+    "proj": "qkv",
+    "M": 37,
+    "K": 3072,
+    "N_out": 5120,
+    "int32_exact": true,
+    "quant_tie_diffs": {
+     "qa": 0,
+     "qw": 557
+    },
+    "seconds": 0.025
+   },
+   {
+    "layer": 27,
+    "proj": "o",
+    "M": 37,
+    "K": 3072,
+    "N_out": 3072,
+    "int32_exact": true,
+    "quant_tie_diffs": {
+     "qa": 0,
+     "qw": 758
+    },
+    "seconds": 0.016
+   },
+   {
+    "layer": 27,
+    "proj": "gate_up",
+    "M": 37,
+    "K": 3072,
+    "N_out": 16384,
+    "int32_exact": true,
+    "quant_tie_diffs": {
+     "qa": 0,
+     "qw": 3246
+    },
+    "seconds": 0.069
+   },
+   {
+    "layer": 27,
+    "proj": "down",
+    "M": 37,
+    "K": 8192,
+    "N_out": 3072,
+    "int32_exact": true,
+    "quant_tie_diffs": {
+     "qa": 0,
+     "qw": 2131
+    },
+    "seconds": 0.039
+   }
+  ],
+  "spot_check": [
+   {
+    "N": 4,
+    "M": 11,
+    "K": 3072,
+    "N_out": 13,
+    "stall": "False",
+    "cycles": 36996,
+    "formula": 36996,
+    "stalls": 0,
+    "mismatches": 0,
+    "case": "L0_qkv_N4"
+   },
+   {
+    "N": 8,
+    "M": 19,
+    "K": 3072,
+    "N_out": 21,
+    "stall": "False",
+    "cycles": 27855,
+    "formula": 27855,
+    "stalls": 0,
+    "mismatches": 0,
+    "case": "L0_o_N8"
+   },
+   {
+    "N": 16,
+    "M": 35,
+    "K": 3072,
+    "N_out": 37,
+    "stall": "False",
+    "cycles": 28071,
+    "formula": 28071,
+    "stalls": 0,
+    "mismatches": 0,
+    "case": "L0_gate_up_N16"
+   },
+   {
+    "N": 4,
+    "M": 11,
+    "K": 8192,
+    "N_out": 13,
+    "stall": "True",
+    "cycles": 163844,
+    "formula": 98436,
+    "stalls": 65408,
+    "mismatches": 0,
+    "case": "L0_down_N4_stall"
+   },
+   {
+    "N": 8,
+    "M": 19,
+    "K": 3072,
+    "N_out": 21,
+    "stall": "False",
+    "cycles": 27855,
+    "formula": 27855,
+    "stalls": 0,
+    "mismatches": 0,
+    "case": "L27_qkv_N8"
+   },
+   {
+    "N": 16,
+    "M": 35,
+    "K": 3072,
+    "N_out": 37,
+    "stall": "False",
+    "cycles": 28071,
+    "formula": 28071,
+    "stalls": 0,
+    "mismatches": 0,
+    "case": "L27_o_N16"
+   },
+   {
+    "N": 4,
+    "M": 11,
+    "K": 3072,
+    "N_out": 13,
+    "stall": "True",
+    "cycles": 61361,
+    "formula": 36996,
+    "stalls": 24365,
+    "mismatches": 0,
+    "case": "L27_gate_up_N4_stall"
+   },
+   {
+    "N": 8,
+    "M": 19,
+    "K": 8192,
+    "N_out": 21,
+    "stall": "False",
+    "cycles": 73935,
+    "formula": 73935,
+    "stalls": 0,
+    "mismatches": 0,
+    "case": "L27_down_N8"
+   }
+  ],
+  "mlp": {
+   "layer": 0,
+   "M": 37,
+   "rel_err_vs_w8a8_numpy": 0.00538569176569581,
+   "rel_err_vs_bf16": 0.08647807687520981,
+   "cosine_vs_bf16": 0.9962799549102783
+  },
+  "device_backend": [
+   {
+    "proj": "down",
+    "N": 16,
+    "M": 13,
+    "K": 8192,
+    "N_out": 40,
+    "measured_cycles": 24717,
+    "bit_exact_vs_stub": true,
+    "seconds": 0.018
+   },
+   {
+    "proj": "qkv",
+    "N": 8,
+    "M": 9,
+    "K": 3072,
+    "N_out": 24,
+    "measured_cycles": 18570,
+    "bit_exact_vs_stub": true,
+    "seconds": 0.009
+   },
+   {
+    "proj": "o",
+    "N": 4,
+    "M": 6,
+    "K": 3072,
+    "N_out": 10,
+    "measured_cycles": 18498,
+    "bit_exact_vs_stub": true,
+    "seconds": 0.01
+   }
+  ],
+  "launch_log_entries": 16
+ },
+ "device_backend_run": {
+  "launches": 12,
+  "all_measured_eq_formula": true,
+  "tile_n": 16,
+  "sim_cycles_total": 28654464,
+  "wall_s": 12.730784893035889
+ },
+ "routed_matmuls": {
+  "prompt_tokens": 512,
+  "calls": 112,
+  "shapes": [
+   {
+    "M": 512,
+    "K": 3072,
+    "N_out": 5120,
+    "count": 28,
+    "cycles_per_call": {
+     "N4": 505118720,
+     "N8": 126771200,
+     "N16": 31938560
+    }
+   },
+   {
+    "M": 512,
+    "K": 3072,
+    "N_out": 3072,
+    "count": 28,
+    "cycles_per_call": {
+     "N4": 303071232,
+     "N8": 76062720,
+     "N16": 19163136
+    }
+   },
+   {
+    "M": 512,
+    "K": 3072,
+    "N_out": 16384,
+    "count": 28,
+    "cycles_per_call": {
+     "N4": 1616379904,
+     "N8": 405667840,
+     "N16": 102203392
+    }
+   },
+   {
+    "M": 512,
+    "K": 8192,
+    "N_out": 3072,
+    "count": 28,
+    "cycles_per_call": {
+     "N4": 806387712,
+     "N8": 201891840,
+     "N16": 50620416
+    }
+   }
+  ]
+ },
+ "sim_cycles": {
+  "N4": 90466811904,
+  "N8": 22691020800,
+  "N16": 5709914112
+ },
+ "fmax_mhz": {
+  "4": 84.2,
+  "8": 67.5,
+  "16": 60.4
+ },
+ "io_bw_bytes_per_s": {
+  "usb2": 40000000.0,
+  "usb3": 400000000.0,
+  "pcie": 4000000000.0
+ },
+ "projected_ttft_ms": {
+  "all:all": {
+   "N4": {
+    "usb2_streamed": 18078600.874192707,
+    "usb3_streamed": 1807951.9397927083,
+    "pcie_streamed": 1074529.753014561,
+    "usb2_minimal": 1074529.753014561,
+    "usb3_minimal": 1074529.753014561,
+    "pcie_minimal": 1074529.753014561,
+    "compute_only": 1074529.753014561
+   },
+   "N8": {
+    "usb2_streamed": 9059169.552592708,
+    "usb3_streamed": 906008.8076327083,
+    "pcie_streamed": 336265.32930381945,
+    "usb2_minimal": 336265.32930381945,
+    "usb3_minimal": 336265.32930381945,
+    "pcie_minimal": 336265.32930381945,
+    "compute_only": 336265.32930381945
+   },
+   "N16": {
+    "usb2_streamed": 4549453.891792708,
+    "usb3_streamed": 455037.2415527084,
+    "pcie_streamed": 94637.06004701296,
+    "usb2_minimal": 116441.56539270832,
+    "usb3_minimal": 94637.06004701296,
+    "pcie_minimal": 94637.06004701296,
+    "compute_only": 94637.06004701296
+   }
+  },
+  "0:mlp": {
+   "N4": {
+    "usb2_streamed": 484797.7731301618,
+    "usb3_streamed": 49035.80193016183,
+    "pcie_streamed": 29391.767315434987,
+    "usb2_minimal": 29391.767315434987,
+    "usb3_minimal": 29391.767315434987,
+    "pcie_minimal": 29391.767315434987,
+    "compute_only": 29391.767315434987
+   },
+   "N8": {
+    "usb2_streamed": 243205.86273016184,
+    "usb3_streamed": 24876.61089016183,
+    "pcie_streamed": 9618.68927830998,
+    "usb2_minimal": 9618.68927830998,
+    "usb3_minimal": 9618.68927830998,
+    "pcie_minimal": 9618.68927830998,
+    "compute_only": 9618.68927830998
+   },
+   "N16": {
+    "usb2_streamed": 122409.90753016183,
+    "usb3_streamed": 12797.015370161831,
+    "pcie_streamed": 3148.0006268505717,
+    "usb2_minimal": 3645.56833016183,
+    "usb3_minimal": 3148.0006268505717,
+    "pcie_minimal": 3148.0006268505717,
+    "compute_only": 3148.0006268505717
+   }
+  }
+ },
+ "projection_detail": {
+  "all:all": {
+   "routed_matmuls": 112,
+   "routed_mac_share_of_prefill": 0.9843211995041403,
+   "gpu_ms_removed_estimate": 529.9418072916694,
+   "projection": {
+    "N4": {
+     "cycles": 90466811904,
+     "fmax_mhz": 84.2,
+     "tile_compute_ms": 1074427.6948218527,
+     "ttft_ms": {
+      "usb2_streamed": 18078600.874192707,
+      "usb3_streamed": 1807951.9397927083,
+      "pcie_streamed": 1074529.753014561,
+      "usb2_minimal": 1074529.753014561,
+      "usb3_minimal": 1074529.753014561,
+      "pcie_minimal": 1074529.753014561,
+      "compute_only": 1074529.753014561
+     },
+     "io_bytes_streamed": 723139952640,
+     "io_bytes_minimal": 4653580288
+    },
+    "N8": {
+     "cycles": 22691020800,
+     "fmax_mhz": 67.5,
+     "tile_compute_ms": 336163.2711111111,
+     "ttft_ms": {
+      "usb2_streamed": 9059169.552592708,
+      "usb3_streamed": 906008.8076327083,
+      "pcie_streamed": 336265.32930381945,
+      "usb2_minimal": 336265.32930381945,
+      "usb3_minimal": 336265.32930381945,
+      "pcie_minimal": 336265.32930381945,
+      "compute_only": 336265.32930381945
+     },
+     "io_bytes_streamed": 362362699776,
+     "io_bytes_minimal": 4653580288
+    },
+    "N16": {
+     "cycles": 5709914112,
+     "fmax_mhz": 60.4,
+     "tile_compute_ms": 94535.00185430463,
+     "ttft_ms": {
+      "usb2_streamed": 4549453.891792708,
+      "usb3_streamed": 455037.2415527084,
+      "pcie_streamed": 94637.06004701296,
+      "usb2_minimal": 116441.56539270832,
+      "usb3_minimal": 94637.06004701296,
+      "pcie_minimal": 94637.06004701296,
+      "compute_only": 94637.06004701296
+     },
+     "io_bytes_streamed": 181974073344,
+     "io_bytes_minimal": 4653580288
+    }
+   }
+  },
+  "0:mlp": {
+   "routed_matmuls": 2,
+   "routed_mac_share_of_prefill": 0.026365746415289472,
+   "gpu_ms_removed_estimate": 14.194869838169717,
+   "projection": {
+    "N4": {
+     "cycles": 2422767616,
+     "fmax_mhz": 84.2,
+     "tile_compute_ms": 28773.962185273158,
+     "ttft_ms": {
+      "usb2_streamed": 484797.7731301618,
+      "usb3_streamed": 49035.80193016183,
+      "pcie_streamed": 29391.767315434987,
+      "usb2_minimal": 29391.767315434987,
+      "usb3_minimal": 29391.767315434987,
+      "pcie_minimal": 29391.767315434987,
+      "compute_only": 29391.767315434987
+     },
+     "io_bytes_streamed": 19367198720,
+     "io_bytes_minimal": 121110528
+    },
+    "N8": {
+     "cycles": 607559680,
+     "fmax_mhz": 67.5,
+     "tile_compute_ms": 9000.884148148149,
+     "ttft_ms": {
+      "usb2_streamed": 243205.86273016184,
+      "usb3_streamed": 24876.61089016183,
+      "pcie_streamed": 9618.68927830998,
+      "usb2_minimal": 9618.68927830998,
+      "usb3_minimal": 9618.68927830998,
+      "pcie_minimal": 9618.68927830998,
+      "compute_only": 9618.68927830998
+     },
+     "io_bytes_streamed": 9703522304,
+     "io_bytes_minimal": 121110528
+    },
+    "N16": {
+     "cycles": 152823808,
+     "fmax_mhz": 60.4,
+     "tile_compute_ms": 2530.1954966887415,
+     "ttft_ms": {
+      "usb2_streamed": 122409.90753016183,
+      "usb3_streamed": 12797.015370161831,
+      "pcie_streamed": 3148.0006268505717,
+      "usb2_minimal": 3645.56833016183,
+      "usb3_minimal": 3148.0006268505717,
+      "pcie_minimal": 3148.0006268505717,
+      "compute_only": 3148.0006268505717
+     },
+     "io_bytes_streamed": 4871684096,
+     "io_bytes_minimal": 121110528
+    }
+   }
+  }
+ },
+ "gpu_ttft_ms": 632.0,
+ "measured_in_process_ms": {
+  "bf16_prefill_512": 538.3830070495605,
+  "phantom_stub_all_prefill_512": 16949.252128601074
+ },
+ "prefill_macs": {
+  "projections": 1443109011456,
+  "attention": 22592618496,
+  "lm_head": 394002432
+ },
+ "notes": [
+  "Projected TTFT = 632 ms (MAX bf16, HTTP, 512 tok) - (routed MAC share x in-process bf16 prefill time) + tile time, tile time = max(cycles/fmax, link bytes/link BW) summed serially over the routed matmuls.",
+  "io 'streamed' = v1 tile as specified (no operand buffers: 2N int8 per beat per pass + int32 results); 'minimal' = each operand crosses the link once (would need on-board A/B buffers).",
+  "Cycles are the DESIGN.md formula with an ideal host; tests/spot_check.mojo and the dev_l0 run (libphantom, cycle-accurate) show the stepped model equals the formula on real routed tiles.",
+  "phantom 'stub' backend computes the int32 result functionally on the host CPU (bit-exact, ~90 GMAC/s); 'device' backend calls lane G1-C's libphantom.dylib C ABI and steps the register model per launch.",
+  "Weights are re-quantized in-graph on every forward (no offline int8 checkpoint); fine for verification, not for speed."
+ ]
+}

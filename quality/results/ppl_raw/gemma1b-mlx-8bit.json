@@ -1,0 +1,23 @@
+{
+ "name": "gemma1b-mlx-8bit",
+ "model": "/Users/sdawka/Code/llming/models/gemma3/mlx-gemma-3-1b-it-8bit",
+ "runtime": "mlx",
+ "ctx": 512,
+ "chunks": 570,
+ "scored_tokens": 145920,
+ "total_test_tokens": 292282,
+ "bos_reset_per_chunk": true,
+ "ppl": 30.247377330948876,
+ "ppl_se": 0.29457934143132636,
+ "mean_nll": 3.4094094809148623,
+ "wall_s_non_authoritative": 56.58142191602383,
+ "meta": {
+  "timestamp": "2026-11-08T20:05:17.405495+00:00",
+  "authoritative_quality": true,
+  "timing_authoritative": false,
+  "versions": {
+   "mlx": "0.32.4",
+   "mlx_lm": "0.32.2"
+  }
+ }
+}

@@ -1,0 +1,29 @@
+[workspace]
+authors = ["Sahil Dawka <me@sahil.pro>"]
+channels = ['https://conda.modular.com/max-nightly', 'conda-forge']
+name = "doom"
+platforms = ['osx-arm64']
+version = "0.1.0"
+
+[tasks]
+# Third-party inputs (pinned commit / URL + sha256): doomgeneric (GPL-2.0), Freedoom (BSD).
+fetch = "bash scripts/fetch.sh"
+# C engine libs + Mojo host binaries (doom-c, doom-mojo, doom-mojo-simd, *-verify, doom-stock-sdl).
+build = "bash scripts/build.sh"
+# Windowed, interactive (SDL2). Extra args go to the host/engine, e.g. `pixi run play -warp 1 1`.
+play = "build/doom-c -iwad third_party/freedoom/freedoom1.wad"
+play-mojo = "build/doom-mojo -iwad third_party/freedoom/freedoom1.wad"
+# Tier 1: headless timedemo fps, frame hashes, Mojo host vs stock C host (SDL dummy driver).
+bench = "python3 -I scripts/bench.py"
+# Tier 2: C vs Mojo drawers: whole-run frame hashes, per-call differential check, fps.
+bench-tier2 = "python3 -I scripts/bench_tier2.py"
+# Tier 3: GPU replay of the drawing pass: per-frame GPU-vs-C check, frame hashes, fps.
+bench-tier3 = "python3 -I scripts/bench_tier3.py"
+
+[dependencies]
+mojo = "==1.3.0.dev2026110805"
+mojo-compiler = "==1.3.0.dev2026110805"
+
+[activation.env]
+MODULAR_METAL_INTREE_METALLIB = "1"
+MODULAR_TELEMETRY_ENABLED = "0"

@@ -1,0 +1,19 @@
+{
+ "raw_bench512": {
+  "first_mismatch": 55,
+  "plain_token": 5536,
+  "spec_token": 52452,
+  "M1_top2": [
+   5536,
+   52452
+  ],
+  "M1_margin": 0.0,
+  "batched_top2": [
+   5536,
+   52452
+  ],
+  "batched_margin": 0.0,
+  "plain_tok_str": " impact",
+  "spec_tok_str": " downstream"
+ }
+}

@@ -1,0 +1,23 @@
+{
+ "name": "qwen0.6b-mlx-4bit",
+ "model": "/Users/sdawka/Code/llming/models/mlx-Qwen3-0.6B-4bit",
+ "runtime": "mlx",
+ "ctx": 512,
+ "chunks": 583,
+ "scored_tokens": 149248,
+ "total_test_tokens": 298938,
+ "bos_reset_per_chunk": false,
+ "ppl": 25.41869221102267,
+ "ppl_se": 0.22074697448516073,
+ "mean_nll": 3.235484817192482,
+ "wall_s_non_authoritative": 31.98461204196792,
+ "meta": {
+  "timestamp": "2026-11-08T16:31:58.228734+00:00",
+  "authoritative_quality": true,
+  "timing_authoritative": false,
+  "versions": {
+   "mlx": "0.32.4",
+   "mlx_lm": "0.32.2"
+  }
+ }
+}

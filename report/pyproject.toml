@@ -1,0 +1,9 @@
+[project]
+name = "llming-report"
+version = "0.1.0"
+description = "Generator for ~/Desktop/mojo-vs-apple-silicon.html (stdlib only)"
+requires-python = ">=3.11"
+dependencies = []
+
+[tool.uv]
+package = false

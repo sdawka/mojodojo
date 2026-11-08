@@ -1,0 +1,5 @@
+.pixi/*
+!.pixi/config.toml
+traces/
+.tools/
+build/

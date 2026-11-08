@@ -1,0 +1,46 @@
+{
+  "tier": "X-DOOM-1",
+  "status": "pass",
+  "fps": 3412.3,
+  "fps_reference": 3321.3,
+  "frame": "x-doom-1.png",
+  "date": "2026-11-08T15:40:35Z",
+  "backend": "Mojo host (game loop, DG_* platform layer, framebuffer, SDL2 via FFI) + doomgeneric C engine",
+  "authoritative": false,
+  "notes": "Freedoom 0.13.0 freedoom1.wad DEMO1 (E1M6), -timedemo, 7156 frames. fps/fps_reference = engine-reported timedemo fps through the SDL2 path with SDL_VIDEODRIVER=dummy: Mojo host vs stock upstream doomgeneric_sdl.c (pure C), medians of 3. Headless Mojo host (no SDL, virtual clock): median 8604 fps over 5 runs. Frame hashes for frames [100, 500, 1000, 2000, 3000, 5000, 7000] reproducible across runs: True. Machine not idle-checked.",
+  "fps_headless": 8604.4,
+  "fps_headless_runs": [
+    8703.8,
+    8604.4,
+    8663.0,
+    8456.8,
+    8514.5
+  ],
+  "fps_sdl_dummy_runs": {
+    "mojo_host": [
+      3412.260254,
+      3412.260254,
+      3277.565674
+    ],
+    "stock_c_host": [
+      3412.260254,
+      3321.266602,
+      3235.0
+    ],
+    "mojo_host_frame_timer": [
+      3423.2,
+      3416.6,
+      3266.5
+    ]
+  },
+  "frame_sha256": {
+    "100": "9780d579ca7c3374c4b3f3f31c24d720d8afd0f96f3f02bfc4c73458d9ebaaed",
+    "500": "f97dc62425422b4061a4bb23afbec82037fcd51aa856b28455a0567101d91f02",
+    "1000": "a26073f407b66d6bcbe336415b350b89447aa9cf13086d0008c0f525a42d85ab",
+    "2000": "e4fb13d764140c1e3135a451d33b113a976ea5b97f2aa292da9803374ebe8f0e",
+    "3000": "25d399c7dc5244b8a1380b6fe03e4dcd83c62f537623fff8ce2e9dac202cf0ac",
+    "5000": "5c605edac4ade02c3cf0d3dc00a3576b9c02507032e57f6056131df936d4ff2b",
+    "7000": "7bfc38a03b6dfa0f0927b27cd9bf75667d8f309b1e6e3c2789005c8383c3a00e"
+  },
+  "hash_of": "raw 320x200 XRGB8888 DG_ScreenBuffer bytes after DG_DrawFrame N"
+}

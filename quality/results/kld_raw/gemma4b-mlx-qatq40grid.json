@@ -1,0 +1,24 @@
+{
+ "name": "gemma4b-mlx-qatq40grid",
+ "ref": "/Users/sdawka/Code/llming/models/gemma3/mlx-gemma-3-4b-it-bf16",
+ "model": "/Users/sdawka/Code/llming/models/gemma3/mlx-gemma-3-4b-it-qat-q40grid",
+ "runtime": "mlx",
+ "ctx": 512,
+ "chunks": 64,
+ "scored_tokens": 16384,
+ "mean_kld": 0.09905909640003896,
+ "mean_kld_se": 0.0020683734773264783,
+ "median_kld": 0.024973925203084946,
+ "p99_kld": 1.3150061953067789,
+ "same_top1_pct": 88.543701171875,
+ "mean_abs_dnll": 0.42530691623687744,
+ "meta": {
+  "timestamp": "2026-11-08T20:10:17.255726+00:00",
+  "authoritative_quality": true,
+  "timing_authoritative": false,
+  "versions": {
+   "mlx": "0.32.4",
+   "mlx_lm": "0.32.2"
+  }
+ }
+}

@@ -1,0 +1,4 @@
+<start_of_turn>user
+Write a Python function that parses an Apache combined log file and returns the top 10 IP addresses by request count and the top 10 requested paths. Include type hints, a docstring, and a small usage example.<end_of_turn>
+<start_of_turn>model
+

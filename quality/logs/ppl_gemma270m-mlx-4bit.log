@@ -1,0 +1,10 @@
+[transformers] Token indices sequence length is longer than the specified maximum sequence length for this model (292282 > 32768). Running this sequence through the model will result in indexing errors
+  [4/570] ppl so far 77.6944
+  [84/570] ppl so far 94.5166
+  [164/570] ppl so far 91.8671
+  [244/570] ppl so far 98.6863
+  [324/570] ppl so far 96.6309
+  [404/570] ppl so far 99.3012
+  [484/570] ppl so far 99.2088
+  [564/570] ppl so far 99.3438
+RESULT gemma270m-mlx-4bit: ppl=100.0596 ± 1.1476 over 145920 tokens (570 chunks of 512)

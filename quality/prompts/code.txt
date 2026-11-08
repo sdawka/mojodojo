@@ -1,0 +1,9 @@
+<|start_header_id|>system<|end_header_id|>
+
+Cutting Knowledge Date: December 2023
+Today Date: 08 Nov 2026
+
+<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+Write a Python function that parses an Apache combined log file and returns the top 10 IP addresses by request count and the top 10 requested paths. Include type hints, a docstring, and a small usage example.<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+

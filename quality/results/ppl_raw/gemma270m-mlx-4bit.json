@@ -1,0 +1,23 @@
+{
+ "name": "gemma270m-mlx-4bit",
+ "model": "/Users/sdawka/Code/llming/models/gemma3/mlx-gemma-3-270m-it-4bit",
+ "runtime": "mlx",
+ "ctx": 512,
+ "chunks": 570,
+ "scored_tokens": 145920,
+ "total_test_tokens": 292282,
+ "bos_reset_per_chunk": true,
+ "ppl": 100.05956276552273,
+ "ppl_se": 1.1476008153218635,
+ "mean_nll": 4.605765636327573,
+ "wall_s_non_authoritative": 18.727818207989912,
+ "meta": {
+  "timestamp": "2026-11-08T19:07:08.959469+00:00",
+  "authoritative_quality": true,
+  "timing_authoritative": false,
+  "versions": {
+   "mlx": "0.32.4",
+   "mlx_lm": "0.32.2"
+  }
+ }
+}

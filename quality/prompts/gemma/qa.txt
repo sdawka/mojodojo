@@ -1,0 +1,4 @@
+<start_of_turn>user
+Explain why the sky is blue and why sunsets are red. Then answer: why isn't the sky violet, given that violet light scatters even more than blue?<end_of_turn>
+<start_of_turn>model
+

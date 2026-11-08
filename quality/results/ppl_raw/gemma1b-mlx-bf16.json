@@ -1,0 +1,23 @@
+{
+ "name": "gemma1b-mlx-bf16",
+ "model": "/Users/sdawka/Code/llming/models/gemma3/mlx-gemma-3-1b-it-bf16",
+ "runtime": "mlx",
+ "ctx": 512,
+ "chunks": 570,
+ "scored_tokens": 145920,
+ "total_test_tokens": 292282,
+ "bos_reset_per_chunk": true,
+ "ppl": 30.20624004263009,
+ "ppl_se": 0.29293941881951285,
+ "mean_nll": 3.408048526965189,
+ "wall_s_non_authoritative": 57.50190454098629,
+ "meta": {
+  "timestamp": "2026-11-08T19:04:28.409521+00:00",
+  "authoritative_quality": true,
+  "timing_authoritative": false,
+  "versions": {
+   "mlx": "0.32.4",
+   "mlx_lm": "0.32.2"
+  }
+ }
+}

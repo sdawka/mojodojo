@@ -1,0 +1,24 @@
+{
+ "name": "gemma4b-mlx-qatbf16",
+ "ref": "/Users/sdawka/Code/llming/models/gemma3/mlx-gemma-3-4b-it-bf16",
+ "model": "/Users/sdawka/Code/llming/models/gemma3/mlx-gemma-3-4b-it-qat-bf16",
+ "runtime": "mlx",
+ "ctx": 512,
+ "chunks": 64,
+ "scored_tokens": 16384,
+ "mean_kld": 0.06234012044069446,
+ "mean_kld_se": 0.001252258550208534,
+ "median_kld": 0.01808749232441187,
+ "p99_kld": 0.713267035484314,
+ "same_top1_pct": 90.478515625,
+ "mean_abs_dnll": 0.3476661443710327,
+ "meta": {
+  "timestamp": "2026-11-08T20:11:06.323152+00:00",
+  "authoritative_quality": true,
+  "timing_authoritative": false,
+  "versions": {
+   "mlx": "0.32.4",
+   "mlx_lm": "0.32.2"
+  }
+ }
+}

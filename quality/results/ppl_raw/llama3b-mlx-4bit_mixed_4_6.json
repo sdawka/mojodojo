@@ -1,0 +1,23 @@
+{
+ "name": "llama3b-mlx-4bit_mixed_4_6",
+ "model": "models/mlx-Llama-3.2-3B-Instruct-4bit-mixed_4_6",
+ "runtime": "mlx",
+ "ctx": 512,
+ "chunks": 564,
+ "scored_tokens": 144384,
+ "total_test_tokens": 288937,
+ "bos_reset_per_chunk": true,
+ "ppl": 10.780507791651557,
+ "ppl_se": 0.07729748504306438,
+ "mean_nll": 2.3777396693484,
+ "wall_s_non_authoritative": 147.33271933399374,
+ "meta": {
+  "timestamp": "2026-11-08T16:35:43.607829+00:00",
+  "authoritative_quality": true,
+  "timing_authoritative": false,
+  "versions": {
+   "mlx": "0.32.4",
+   "mlx_lm": "0.32.2"
+  }
+ }
+}

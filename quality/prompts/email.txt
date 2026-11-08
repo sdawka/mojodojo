@@ -1,0 +1,9 @@
+<|start_header_id|>system<|end_header_id|>
+
+Cutting Knowledge Date: December 2023
+Today Date: 08 Nov 2026
+
+<|eot_id|><|start_header_id|>user<|end_header_id|>
+
+Draft a polite but firm email to a contractor who is three weeks late finishing a kitchen renovation. Ask for a revised schedule and mention the penalty clause in the contract.<|eot_id|><|start_header_id|>assistant<|end_header_id|>
+

@@ -1,0 +1,6 @@
+.pixi/
+build/
+third_party/doomgeneric/
+third_party/freedoom/
+.default.cfg
+.savegame/
