@@ -1,0 +1,26 @@
+{
+ "name": "llama3b-max-w8a8-fq-all",
+ "model": "/Users/sdawka/Code/llming/models/Llama-3.2-3B-Instruct",
+ "runtime": "max",
+ "w8a8_mode": "fq",
+ "w8a8_route": "all:all",
+ "w8a8_smooth": null,
+ "ctx": 512,
+ "chunks": 564,
+ "scored_tokens": 144384,
+ "total_test_tokens": 288937,
+ "bos_reset_per_chunk": true,
+ "ppl": 10.389896465893145,
+ "ppl_se": 0.07410303042311879,
+ "mean_nll": 2.340833840277382,
+ "load_s_non_authoritative": 10.324671983718872,
+ "wall_s_non_authoritative": 1185.1723771095276,
+ "meta": {
+  "timestamp": "2026-11-08T18:26:40.146382+00:00",
+  "authoritative_quality": true,
+  "timing_authoritative": false,
+  "versions": {
+   "max": "26.8.0.dev2026110805"
+  }
+ }
+}

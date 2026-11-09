@@ -1,0 +1,17 @@
+WARNING:max.pipelines:Jenga KV geometry can strand 11.8% of the per-device KV budget: 1 leaves plus the null block each own whole 14.00 MiB huge blocks, out of 238.00 MiB. Setting a stride alignment on the leaf that inflates the huge block lets the planner pad it.
+  [2/564] ppl so far 7.1523
+  [42/564] ppl so far 10.2684
+  [82/564] ppl so far 10.8511
+  [122/564] ppl so far 11.0446
+  [162/564] ppl so far 9.9342
+  [202/564] ppl so far 10.4430
+  [242/564] ppl so far 10.2394
+  [282/564] ppl so far 10.0598
+  [322/564] ppl so far 10.1159
+  [362/564] ppl so far 10.3192
+  [402/564] ppl so far 10.5149
+  [442/564] ppl so far 10.4628
+  [482/564] ppl so far 10.4386
+  [522/564] ppl so far 10.4337
+  [562/564] ppl so far 10.4129
+RESULT llama3b-max-w8a8-fq-all: ppl=10.3899 ± 0.0741 over 144384 tokens (564 chunks of 512)

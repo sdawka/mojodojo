@@ -21,6 +21,10 @@
   - A Mojo program targets the phantom device (plugin or FFI fallback) and gets bit-exact int8 matmul results.
   - Llama 3.2 3B served by MAX with some prefill matmuls routed to the tile still produces matching greedy output, with simulated cycle counts reported.
   - (Optional) the same RTL runs on an ECP5 and matches the simulator.
+- Extension (user direction, 2026-11-08, after the LinkedIn framing): Gemmini-style — a RISC-V soft core beside a bus-attached tile, with Mojo generating the RTL *and* running as bare-metal firmware, and "can it run DOOM?" on that SoC. Added signals:
+  - A buffered tile with a bus interface (tile v2) co-simulates bit- and cycle-exact against a Mojo bus model.
+  - Bare-metal Mojo firmware on a simulated RISC-V SoC drives the tile bit-exactly.
+  - (Hardware) the same SoC on an ECP5 board matches the simulation (folds into G1-E).
 
 <!-- grreat:record id=goal.processors kind=goal role=goal status=active level=2 parent=goal.north-star -->
 ## Goal 2 — Processor atlas of the M5, then optimize 1–4B models

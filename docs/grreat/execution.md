@@ -1,7 +1,18 @@
 <!-- grreat:record id=execution.next kind=execution_item status=active parent=roadmap.next -->
-# Sprint 1 — run lanes G1-A and G2-M1 in parallel
+# Sprint 2 — G2-M3 timed runs ∥ RISC-V SoC path toward hardware
 
 ## Now
+
+- Milestone: [[roadmap]] Sprint 2 (status table there). Latest review: [[analysis]] 2026-11-09.
+- Next action (Goal 2): idle-machine timed runs per [quality/QUALITY.md](../../quality/QUALITY.md) §5 — Llama Q4_K_M 3B + 1B draft (k=2,3), Gemma 3 4B no-draft baselines, QAT-local Q4_0 + 270M draft, MLX speculative with the plain-KVCache fix. Quality gates all already pass; only speed is unmeasured.
+- Next action (Goal 1): user decisions — buy a board (G1-E, ULX3S 85F or Colorlight i9, [fpga/BOARDS.md](../../fpga/BOARDS.md)); approve the `./bazelw` compiler build (G1-C codegen plugin). Without either: G1-DMA in simulation.
+- New since the last update: Llama 3B W8A8 (all projections) wikitext ppl in MAX +0.67% vs MAX bf16 (re-verified from raw NLL, [[journals/2026-11-09]]). lane-g1c ended without running `./bazelw query`; still open.
+- Running now: nothing (all lanes idle).
+- Blockers: no ECP5 board; compiler source build awaits approval.
+- Public: github.com/sdawka/mojodojo at 2db52ec (tree = local 5a7d0c0); later local commits not yet pushed.
+- Last updated: 2026-11-09.
+
+### History of this section (2026-11-08, Sprint 1 and after)
 
 - Goal: [[goals]]. Milestone: [[roadmap]] `roadmap.next` (Sprint 1).
 - Lane G1-A (`fpga/`): DONE — simulator + spec, 24/24 tests re-verified by orchestrator ([[journals/2026-11-08]]). Next for Goal 1: G1-B (Verilog from Mojo comptime, Verilator co-sim vs `pixi run trace` golden vectors) — start after the atlas timed run, or now if CPU-light.
@@ -21,4 +32,5 @@
 
 ## Work history
 
-- [[journals/2026-11-08]] — Setup, no-Xcode Metal fix, phase-1 baseline, toolchain research, GRREAT initialized, git init.
+- [[journals/2026-11-08]] — Setup, no-Xcode Metal fix, phase-1 baseline, toolchain research, GRREAT initialized, git init; then G1-A..D, G2-M1..M2, G2-M3 quality, DOOM 1–4 (4 in sim), tile v2, SoC, Mojo on RISC-V.
+- [[journals/2026-11-09]] — W8A8 ppl recorded, public repo + report/README/post updates, GRREAT reconciled (Sprint 2).

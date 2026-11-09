@@ -17,30 +17,73 @@
     "busy_cycles_formula": "2 + ceil(M/8)*ceil(N/8)*(K+24)"
   },
   "verification": {
-    "model_unit_tests": [7, 7],
+    "model_unit_tests": [
+      7,
+      7
+    ],
     "cosim_programs": 62,
-    "cosim_configs": ["tile2_n8 (16/32/32 KiB)", "tile2_n4 (4/4/8 KiB, exercises address wrap)"],
+    "cosim_configs": [
+      "tile2_n8 (16/32/32 KiB)",
+      "tile2_n4 (4/4/8 KiB, exercises address wrap)"
+    ],
     "cosim_matmul_runs": 486,
     "cosim_cycles": 1152168,
     "cosim_bus_writes": 246805,
     "cosim_bus_reads_checked": 92631,
-    "checked_each_access": ["wb_dat_r", "ack timing (request cycle ack=0, next cycle ack=1, idle cycles ack=0)", "irq level"],
+    "checked_each_access": [
+      "wb_dat_r",
+      "ack timing (request cycle ack=0, next cycle ack=1, idle cycles ack=0)",
+      "irq level"
+    ],
     "checked_end": "total cycle count",
-    "negative_checks_caught": [8, 8],
-    "v1_regression": {"test": "24/24 pass", "cosim": "62 traces, 84,823 cycles pass; rtl/ unchanged"}
+    "negative_checks_caught": [
+      8,
+      8
+    ],
+    "v1_regression": {
+      "test": "24/24 pass",
+      "cosim": "62 traces, 84,823 cycles pass; rtl/ unchanged"
+    }
   },
   "synthesis": {
     "device": "LFE5U-85F CABGA381",
     "flow": "yosys synth_ecp5 (DSP mapping) + nextpnr-ecp5 --freq 200 --timing-allow-fail, bare top (90 I/O, no wrapper)",
-    "yosys_cells": {"LUT4": 4090, "CCU2C": 1363, "TRELLIS_FF": 6137, "MULT18X18D": 64, "DP16KD": 40, "PFUMX": 275, "L6MUX21": 49},
-    "pnr_utilization": {
-      "TRELLIS_COMB": [7216, 83640],
-      "TRELLIS_FF": [6137, 83640],
-      "MULT18X18D": [64, 156],
-      "DP16KD": [40, 208],
-      "TRELLIS_IO": [90, 365]
+    "yosys_cells": {
+      "LUT4": 4090,
+      "CCU2C": 1363,
+      "TRELLIS_FF": 6137,
+      "MULT18X18D": 64,
+      "DP16KD": 40,
+      "PFUMX": 275,
+      "L6MUX21": 49
     },
-    "fmax_mhz_by_seed": {"1": 97.38, "2": 96.55, "3": 96.34},
+    "pnr_utilization": {
+      "TRELLIS_COMB": [
+        7216,
+        83640
+      ],
+      "TRELLIS_FF": [
+        6137,
+        83640
+      ],
+      "MULT18X18D": [
+        64,
+        156
+      ],
+      "DP16KD": [
+        40,
+        208
+      ],
+      "TRELLIS_IO": [
+        90,
+        365
+      ]
+    },
+    "fmax_mhz_by_seed": {
+      "1": 97.38,
+      "2": 96.55,
+      "3": 96.34
+    },
     "critical_path": "register -> combinational MULT18X18D (3.9 ns) -> routing -> prodq register (about 10.3 ns total)",
     "fmax_history_mhz": {
       "v1 N=8 core alone, LFE5U-45F (README)": 67.5,
@@ -49,16 +92,51 @@
     }
   },
   "soc_budget_85f": {
-    "free_after_tile2": {"TRELLIS_COMB": 76424, "TRELLIS_FF": 77503, "MULT18X18D": 92, "DP16KD": 168},
+    "free_after_tile2": {
+      "TRELLIS_COMB": 76424,
+      "TRELLIS_FF": 77503,
+      "MULT18X18D": 92,
+      "DP16KD": 168
+    },
     "vexriscv_standard_measured": {
       "source": "pythondata-cpu-vexriscv 642ecfed VexRiscv.v (LiteX 'standard': rv32im, I$/D$), yosys synth_ecp5 only, no P&R",
-      "LUT4": 2984, "CCU2C": 181, "TRELLIS_FF": 1527, "MULT18X18D": 4, "DP16KD": 10
+      "LUT4": 2984,
+      "CCU2C": 181,
+      "TRELLIS_FF": 1527,
+      "MULT18X18D": 4,
+      "DP16KD": 10
     },
-    "vexriscv_lite_measured": {"LUT4": 2814, "CCU2C": 159, "TRELLIS_FF": 1090, "MULT18X18D": 0, "DP16KD": 4},
+    "vexriscv_lite_measured": {
+      "LUT4": 2814,
+      "CCU2C": 159,
+      "TRELLIS_FF": 1090,
+      "MULT18X18D": 0,
+      "DP16KD": 4
+    },
     "litedram_and_soc_infra_estimate": {
       "measured": false,
       "note": "LiteDRAM is not checked out locally; rough estimate, to be replaced by lane-soc's build: SDR SDRAM controller+PHY about 1.5-3k LUT4, ECP5 DDR3 PHY+controller about 3-5k LUT4 and a few EBR; LiteX bus/UART/timer/CSR about 1-2k LUT4; BIOS ROM + SRAM about 10-30 EBR"
     },
     "conclusion": "tile2 + VexRiscv + SDRAM controller + LiteX infrastructure is about 15-20k of 83.6k logic cells, about 70/156 DSPs and about 60-80/208 EBR. A second tile2_n8 also fits (128+4 DSPs)."
+  },
+  "soc_integration": {
+    "by": "lane-soc",
+    "where": "fpga/soc (LiteX VexRiscv SoC, Verilator), slave at 0x90000000 uncached, adr[14:0]",
+    "reproduce": "cd fpga/soc && pixi run soc && pixi run tiletest",
+    "matmuls_bit_exact": [
+      6,
+      6
+    ],
+    "cycles_register_matches_formula": {
+      "13x64x9": 354,
+      "8x256x32": 1122
+    },
+    "end_to_end_8x256x32_cycles": {
+      "load_a_b": 126011,
+      "run": 1181,
+      "read_c": 2996,
+      "cpu_reference": 2090499,
+      "speedup": "16x"
+    }
   }
 }

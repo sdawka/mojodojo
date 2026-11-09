@@ -128,6 +128,7 @@ A full SoC (tile + CPU + SDRAM + infrastructure) is roughly 15–20k of the 83.6
 - **The bus is now the bottleneck.** The CPU must store Aᵀ + B (8 KiB + 32 KiB in that example, about 10k word stores at ≥ 2 bus cycles each, more in practice with VexRiscv) and read back C (256 words). Loading takes longer than computing. Two next steps would fix that:
   - A Wishbone master DMA from SDRAM, or LiteX's `WishboneDMAReader`.
   - Double-buffered A/B, so loads overlap the run. This needs bus access during BUSY, which the contract currently forbids on purpose.
+- **Measured in the SoC (lane-soc, LiteX VexRiscv in Verilator, `fpga/soc`: `pixi run soc && pixi run tiletest`).** For 8×256×32, loading A/B takes 126,011 cycles, the run 1,181 (CYCLES = 1,122, as the formula predicts; the rest is polling) and reading C 2,996. The CPU-only reference takes 2,090,499 cycles, so the tile is 16× faster end to end, and 97% of that time is spent loading operands over the bus. All 6 test matmuls in the SoC are bit-exact.
 - **Capacity.** Default capacity per run is K·roundup(M,8) ≤ 16 KiB, K·roundup(N,8) ≤ 32 KiB and M·roundup(N,8) ≤ 8192 C words. Larger K is split across runs with ACCUM. Larger M and N are split by firmware.
 - **Firmware's responsibility.** Overlapping C tiles (`C_LD` too small) are not detected.
 
